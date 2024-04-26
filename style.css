@@ -1,0 +1,351 @@
+@font-face {
+    font-family: 'circular';
+    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Black.otf);
+}
+@font-face {
+    font-family: 'circular';
+    font-weight: 200;
+    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Light.otf);
+}
+@font-face {
+    font-family: 'circular';
+    font-weight: 400;
+    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Bold.otf);
+}
+@font-face {
+    font-family: 'circular';
+    font-weight: 300;
+    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Medium.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: circular;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+span{
+    margin-top: 5px;
+}
+.search  v{
+    padding-top: 10px;
+}
+
+.search span{
+    color: grey;
+}
+.lib-logo ul li{
+    color: grey;
+}
+.nav{
+    margin: 8px 0 0 8px;
+    font-size: 15px;
+    padding: 20px 0 20px 0;
+}
+.library{
+    font-size: 15px;
+    height: 70vh;
+    margin: 8px;
+    position: relative;
+    color: white;
+
+}
+.logo img{
+    margin-left: 20px;
+}
+.nav ul li{
+    list-style: none;
+    width: 24px;
+    display: flex;
+    color: white;
+    gap: 16px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.library ul li{
+    display: flex;
+    color: grey;
+    gap: 20px;
+    padding: 15px 0 0 0;
+    margin: 10px 0 0 20px;
+}
+.plus{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .1s;
+    cursor: pointer;
+}
+#plus{
+    height: 16px;
+    border-radius: 50%;
+}
+.plus:hover{
+    background-color: #181818;
+}
+.plus img{
+    transition: all .1s;
+}
+.plus:hover img{
+    filter: brightness(2);
+}
+.library img{
+    height: 23px;
+}
+.create-pl{
+    background-color: #242424;
+    border-radius: 8px;
+    width: 95%;
+    height: auto;
+    margin: 20px auto;
+}
+.create-pl button{
+    margin: 15px;
+    height: 30px;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+}
+.create-pl button:hover{
+    transform: scale(1.05);
+}
+.create-pl h1{
+    font-size: 16px;
+    padding: 15px;
+}
+.create-pl p{
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 15px;
+    color: #e0e0e0;
+}
+.link-box{
+    margin: 45px 0;
+    padding: 0 25px;
+    position: relative;
+}
+.cookie{
+    font-size: 10px;
+    font-weight: 300;
+    color: grey;
+    padding: 20px 0;
+}
+.right-bot{
+    padding: 0px;
+    float: left;
+}
+.right-bot button{
+    display: flex;
+    background: transparent;
+    border: 1px solid grey;
+    border-radius: 50px;
+    height: 30px;
+    width: auto;
+    padding: 0 13px;
+    padding-bottom: 5px;
+    color: white;
+}
+.right-bot button:hover{
+    filter: brightness(5);
+    transform: scale(1.05);
+}
+.right-bot p{
+    margin-top: 8px;
+}
+.right-bot button img{
+    height: 16px;
+    padding: 6px 5px 0 0;
+}
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+    font-size: 11px;
+    font-weight: 300;
+    display: flex;
+    gap: 20px;
+}
+.tab{
+    width: 22vw;
+    background-color: #121211;
+    border-radius: 8px;
+}
+.tab-2{
+    width: 90%;
+    background-color: #121211;
+    border-radius: 8px;
+}
+.right{
+    margin: 8px 8px 8px 0;
+}
+.nav-2{
+    background-color: #101010;
+    display: flex;
+    justify-content: space-between;
+}
+.side-btn{
+    padding: 12px;
+}
+.side-nav img{
+    height: 14px;
+    margin-top: 3px;
+}
+.side-nav{
+    border-radius: 50%;
+    height: 33px;
+    width: 33px;
+    margin: 0 2px;
+    background-color: #00000088;
+    border: none;
+    transition: all ease .5s;
+}
+.side-nav:hover img{
+    filter: brightness(5);
+}
+button{
+    transition: all .05s;
+    cursor: pointer;
+}
+.log-in button{
+    border-radius: 50px;
+    height: 42px;
+    width: 100px;
+    border: none;
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sign-in:hover{
+    transform: scale(1.025);
+    background-color: #f1f1f1;
+}
+.sign-up:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+.sign-up{
+    background-color: #101010;
+    color: grey;
+}
+.sign-in{
+    margin-right: 30px;
+    background-color: #fff;    
+}
+.bottom-bar{
+    background: linear-gradient(to left, #509bf5, #af2896);
+    height: 67px;
+    width: 99%;
+    margin: 0 auto;
+    position: relative;
+}
+.bottom-bar button p{
+    margin-top: 15px;
+}
+.preview{
+    color: #fff;
+    padding: 15px;
+}
+.preview :nth-child(1){
+    font-size: 14px;
+}
+.bottom-bar button{
+    display: flex;
+    border-radius: 50px;
+    height: 50px;
+    width: auto;
+    padding: 0 30px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .05s ;
+}
+.bottom-bar button:hover{
+    transform: scale(1.04);
+}
+.songs{
+    position: relative;
+    background: linear-gradient(to top, transparent, #ffffff13);
+}
+.opt{
+    display: flex;
+    justify-content: space-between;
+}
+.opt :nth-child(1){
+    font-size: 22px;
+    color: #fff;
+    margin-left: 12px;
+    margin-top: 7px;
+}
+.show{
+    font-size: 12px;
+    color: grey;
+}
+.artist{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    margin: 0 0 0 10px;
+}
+.song{
+    height: 250px;
+    width: 187px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3px;
+}
+.artists{
+    color: white;
+    font-size: 10px;
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    margin-left: 25px;
+    flex-direction: column;
+}
+.artists h2{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.artists h3{
+    font-weight: 200;
+    font-size: 12px;
+    color: grey;
+}
+.song:hover{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0.030));
+    cursor: pointer;
+    border-radius: 7px;
+}
+.song img{
+    width: 170px;
+    height: 170px;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 14px 40px rgba(0,0,0,0.65);
+    margin-top: 10px;
+
+}
