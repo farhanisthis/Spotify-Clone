@@ -1,157 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Clone</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="left">
-        <div class="nav tab">
-          <div class="logo">
-            <img src="/Spotify-Clone/assets/images/logo.svg" alt="logo" />
-          </div>
-          <div class="home">
-            <ul>
-              <li>
-                <img
-                  src="/Spotify-Clone/assets/images/home.svg"
-                  alt="home"
-                /><span><a href="#">Home</a></span>
-              </li>
-            </ul>
-          </div>
-          <div class="search">
-            <ul>
-              <li>
-                <img
-                  src="/Spotify-Clone/assets/images/search.svg"
-                  alt="search"
-                /><span><a href="#">Search</a></span>
-              </li>
-            </ul>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer>
+  </script>
+
+</head>
+<script>
+  function nextPageRedirect(pritam) {
+    window.location.href = `albums.html?content=${pritam}`
+  }
+</script>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="nav tab">
+        <div class="logo">
+          <img src="/Spotify-Clone/assets/images/logo.svg" alt="logo" />
         </div>
-        <div class="library tab">
-          <div class="lib-logo">
-            <ul>
-              <li>
-                <img src="/Spotify-Clone/assets/images/library.svg" alt="library"/><span>Your Library</span><div class="plus"><img src="/Spotify-Clone/assets/plus.svg" alt="add to library" id="plus"/></div>
-              </li>
-            </ul>
-          </div>
-          <div class="create-pl">
-            <h1>Create Your first playlist</h1>
-            <p>It's easy, we'll help you</p>
-            <button><a href="#">Create playlist</a></button>
-          </div>
-          <div class="create-pl">
-            <h1>Let's find some podcasts to follow</h1>
-            <p>We'll keep you updated on new episodes</p>
-            <button><a href="#">Browse podcasts</button>
-          </div>
-          
-          <div class="link-box">
-            <div class="links">
-              <div>Legal</div>
-              <div>Safety & Privacy Center</div>
-              <div>Privacy Policy</div>
-              <div>Cookies</div>
-              <div>About Ads</div>
-              <div>Accessibility</div>
+        <div class="home">
+          <ul>
+            <li>
+              <img src="/Spotify-Clone/assets/images/home.svg" alt="home" /><span><a href="#">Home</a></span>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <ul>
+            <li>
+              <img src="/Spotify-Clone/assets/images/search.svg" alt="search" /><span><a href="#">Search</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="library tab">
+        <div class="lib-logo">
+          <ul>
+            <li>
+              <img src="/Spotify-Clone/assets/images/library.svg" alt="library" /><span>Your Library</span>
+              <div class="plus"><img src="/Spotify-Clone/assets/plus.svg" alt="add to library" id="plus" /></div>
+            </li>
+          </ul>
+        </div>
+        <div class="create-pl">
+          <h1>Create Your first playlist</h1>
+          <p>It's easy, we'll help you</p>
+          <button><a href="#">Create playlist</a></button>
+        </div>
+        <div class="create-pl">
+          <h1>Let's find some podcasts to follow</h1>
+          <p>We'll keep you updated on new episodes</p>
+          <button><a href="#">Browse podcasts</button>
+        </div>
+
+        <div class="link-box">
+          <div class="links">
+            <div>Legal</div>
+            <div>Safety & Privacy Center</div>
+            <div>Privacy Policy</div>
+            <div>Cookies</div>
+            <div>About Ads</div>
+            <div>Accessibility</div>
           </div>
           <div class="cookie">
             <a href="#">Cookies</a>
           </div>
           <div class="right-bot">
-            <button><img src="/Spotify-Clone/assets/images/network.svg" alt=""><p>English</p></button>
-          </div>
+            <button><img src="/Spotify-Clone/assets/images/network.svg" alt="">
+              <p>English</p>
+            </button>
           </div>
         </div>
       </div>
-      <div class="right tab-2">
-        <div class="nav-2">
-          <div class="side-btn">
-            <button class="side-nav"><a href="#">
+    </div>
+    <div class="right tab-2">
+      <div class="nav-2">
+        <div class="side-btn">
+          <button class="side-nav"><a href="#">
               <img src="/Spotify-Clone/assets/images/left.svg" alt="" /></a>
-            </button>
-            <button class="side-nav">
-              <img src="/Spotify-Clone/assets/images/right.svg" alt="" />
-            </button>
-          </div>
-          <div class="log-in">
-            <button class="sign-up"><a href="#">Sign up</a></button>
-            <button class="sign-in"><a href="#">Log in</a></button>
-          </div>
+          </button>
+          <button class="side-nav">
+            <img src="/Spotify-Clone/assets/images/right.svg" alt="" />
+          </button>
         </div>
-        <div class="songs">
-          <div class="opt">
-            <p><a href="#">Popular artists</a></p>
-            <p class="show"><a href="#">Show all</a></p>
-          </div>
-          <div class="artist">
-            <a href="albums.html"><div class="song"><img src="./assets/images/pritam.jpg" alt="">
+        <div class="log-in">
+          <button class="sign-up"><a href="#">Sign up</a></button>
+          <button class="sign-in"><a href="#">Log in</a></button>
+        </div>
+      </div>
+      <div class="songs">
+        <div class="opt">
+          <p><a href="#">Popular artists</a></p>
+          <p class="show"><a href="#">Show all</a></p>
+        </div>
+        <div class="artist">
+          
+            <div class="song" id="pritam"><button type="button" class="btn" onclick="nextPageRedirect('Pritam')"><img src="./assets/images/pritam.jpg" alt=""></button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg>
+                </button>
                 <h2>Pritam</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-            <a href="albums.html"><div class="song"><img src="./assets/images/legend.jpg" alt="">
+            </div>
+          
+          
+            <div class="song" id="legend">
+              <button type="button" class="btn" onclick="nextPageRedirect('Arijit Singh')">
+              <img src="./assets/images/arijitsingh.jpg" alt="">
+            </button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg></button>
                 <h2>Arijit Singh</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-            <a href="albums.html"><div class="song"><img src="./assets/images/ar_rahman.jpg" alt="">
+            </div>
+            <div class="song" id="ar">
+              <button type="button" class="btn" onclick="nextPageRedirect('A.R. Rahman')">
+              <img src="./assets/images/a.r.rahman.jpg" alt="">
+            </button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg></button>
                 <h2>A.R. Rahman</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-            <a href="albums.html"><div class="song"><img src="./assets/images/vishal_mishra.jpg" alt="">
+            </div>
+            <div class="song" id="vishalm">
+              <button type="button" class="btn" onclick="nextPageRedirect('Vishal Mishra')">
+              <img src="./assets/images/vishalmishra.jpg" alt="">
+            </button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg></button>
                 <h2>Vishal Mishra</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-            <a href="albums.html"><div class="song"><img src="./assets/images/anirudh.jpg" alt="">
+            </div>
+            <div class="song" id="anirudh">
+              <button type="button" class="btn" onclick="nextPageRedirect('Anirudh')">
+              <img src="./assets/images/anirudh.jpg" alt="">
+            </button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg></button>
                 <h2>Anirudh</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-            <a href="albums.html"><div class="song"><img src="./assets/images/vishal-shekhar.jpg" alt="">
+            </div>
+            <div class="song" id="shekhar">
+              <button type="button" class="btn" onclick="nextPageRedirect('Vishal Shekhar')">
+              <img src="./assets/images/vishalshekhar.jpg" alt="">
+            </button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg></button>
                 <h2>Vishal-Shekhar</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-            <a href="albums.html"><div class="song"><img src="./assets/images/aatif.jpg" alt="">
+            </div>
+            <div class="song" id="aatif">
+              <button type="button" class="btn" onclick="nextPageRedirect('Aatif Aslam')">
+              <img src="./assets/images/aatifaslam.jpg" alt="">
+            </button>
               <div class="artists">
+                <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                  </svg></button>
                 <h2>Aatif Aslam</h2>
                 <h3>Artist</h3>
               </div>
-              <button class="hover-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></button>
-            </div></a>
-          </div>
+            </div>
         </div>
       </div>
     </div>
-    <div class="bottom-bar">
-      <div class="preview">
-        <p>Preview of Spotify</p>
-        <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
-      </div>
-      <button><p>Sign up free</p></button>
+  </div>
+  <div class="bottom-bar">
+    <div class="preview">
+      <p>Preview of Spotify</p>
+      <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <button>
+      <p>Sign up free</p>
+    </button>
+  </div>
+</body>
+
 </html>

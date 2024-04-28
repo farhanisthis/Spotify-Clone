@@ -230,6 +230,9 @@ span{
     height:60vh;
     width: 100%;
 }
+#row1{
+    padding-left: 3px;
+}
 .row{
     width: 1200px;
     height: 50px;
@@ -473,12 +476,14 @@ button{
     display: flex;
     margin: 0 0 0 10px;
 }
-.song{
-    height: 250px;
+.btn{
+    height: 185px;
     width: 187px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: transparent;
+    border: none;
     position: relative;
 }
 .artists{
@@ -527,7 +532,7 @@ button{
     border-radius: 50%;
     position: absolute;
     bottom: 65px;
-    left: 125px;
+    left: 105px;
     display: flex;
     justify-content: center;
     align-items: center;
