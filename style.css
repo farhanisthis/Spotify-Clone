@@ -4,6 +4,11 @@
 }
 @font-face {
     font-family: 'circular';
+    font-weight: 100;
+    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Light.otf);
+}
+@font-face {
+    font-family: 'circular';
     font-weight: 200;
     src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Light.otf);
 }
@@ -195,7 +200,7 @@ span{
 }
 .tab-22{
     width: 90%;
-    background: linear-gradient(to bottom, #d94f67, #d94f67, #121212,#121212);
+    background: linear-gradient(to bottom, #d94f67, #d94f67, #202020,#222222);
     border-radius: 8px;
     height: 90.3vh;
 }
@@ -221,18 +226,119 @@ span{
     width: 100%;
 }
 .song-list{
-    background-color: #0000002c;
+    background-color: #0000006e;
     height:60vh;
     width: 100%;
+}
+.row{
+    width: 1200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 100;
+    gap: 10px;
+    color: grey;
+    padding: 5px 0 0 50px;
+    p{
+        font-size: 15px;
+        color: lightgray
+    };
+}
+.row:hover{
+    background-color: #4e4e4e73;
+    border-radius: 4px;
+    .duration{
+        img{
+            visibility: visible;
+        }
+    }
+}
+.songs-list{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 54px;
+    width: 640px;
+    h3{
+        font-size: 15px;
+        font-weight: 100;
+        color: white;
+    };
+    img{
+        border-radius: 3px;
+    }
+}
+.songs-list-3{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 54px;
+    width: 384px;
+}
+.duration{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    img{
+        visibility: hidden;
+    }
+}
+.song-info{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+.song-ls{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    h1{
+        font-size: 24px;
+        padding: 20px;
+    };
+    cursor: pointer;
+}
+.btns{
+    align-items: center;
+    height: 100px;
+    display: flex;
+    width: 270px;
+    justify-content: space-evenly;
+    img:hover{
+        filter: brightness(10);
+        cursor: pointer;
+        transform: scale(1.03);
+    }
+}
+.follow{
+    display: flex;
+    background: transparent;
+    border: 1px solid grey;
+    border-radius: 50px;
+    height: 30px;
+    width: auto;
+    padding: 0 13px;
+    padding-bottom: 5px;
+    color: white;
+    p{
+        margin-top: 8px;
+    }
+}
+.follow:hover{
+    filter: brightness(5);
+    transform: scale(1.05);
 }
 .art-info{
     display: flex;
     align-items: center;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.301));
 }
 .art-name{
     color: #fff;
     h1{
         font-size: 96px;
+        letter-spacing: -4px;
     };
     h2{
         font-size: 14px;
@@ -248,12 +354,14 @@ span{
     p{
         font-weight: 200;
     }
+    
 }
 .art-img img{
     border-radius: 50%;
     height: 230px;
     width: 230px;
-    padding: 0 20px 0 0;
+    margin: 0 20px 0 20px;
+    box-shadow: 2px 10px 110px rgba(0, 0, 0, 0.726);
 }
 .side-btn{
     padding: 12px;
@@ -427,6 +535,26 @@ button{
     transition: transform 0.3s ease, opacity 0.3s ease;;
 }
 .hover-btn svg{
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 3px;
+    color: #000000;
+    mix-blend-mode:multiply;
+}
+.hover-btn-2 {
+    height: 55px;
+    width: 55px;
+    background-color: #1fde64;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hover-btn-2:hover{
+    transform: scale(1.04);
+}
+.hover-btn-2 svg{
     width: 18px;
     height: 18px;
     margin: 0 0 0 3px;
