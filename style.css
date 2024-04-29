@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'circular';
-    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Black.otf);
+    src: url(./Fonts/CircularSpotifyText-Black.otf);
 }
 @font-face {
     font-family: 'circular';
     font-weight: 100;
-    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Light.otf);
+    src: url(./Fonts/CircularSpotifyText-Light.otf);
 }
 @font-face {
     font-family: 'circular';
     font-weight: 200;
-    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Light.otf);
+    src: url(./Fonts/CircularSpotifyText-Light.otf);
 }
 @font-face {
     font-family: 'circular';
     font-weight: 400;
-    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Bold.otf);
+    src: url(./Fonts/CircularSpotifyText-Bold.otf);
 }
 @font-face {
     font-family: 'circular';
     font-weight: 300;
-    src: url(/Spotify-Clone/Fonts/CircularSpotifyText-Medium.otf);
+    src: url(./Fonts/CircularSpotifyText-Medium.otf);
 }
 *{
     margin: 0;
@@ -591,4 +591,46 @@ button{
 }
 .art-songs:hover img{
     transform: scale(1.05);
+}
+.player{
+    display: flex;
+    justify-content: center;
+}
+.media{
+    border-radius: 8px;
+    height: 60px;
+    width: 76%;
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.media-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.media-btn button:hover{
+    transform: scale(1.05);
+    img{
+        height: 21px;
+    }
+}
+.media button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seekbar{
+    width: 98%;
+    height: 3px;
+    background-color: #fff;
 }

@@ -26,15 +26,15 @@
 </head>
 <script>
     function nextPageRedirect(pritam) {
-    window.location.href = `albums.html?content=${pritam}`
-  }
+        window.location.href = `albums.html?content=${pritam}`
+    }
     function changeImg() {
         const param = new URLSearchParams(window.location.search)
         const content = param.get('content')
         console.log(content)
         const album = document.createElement('img')
         const lowerCaseArtist = content.toLowerCase().replace(/\s/g, "")
-        album.src = `/Spotify-Clone/assets/images/${lowerCaseArtist}.jpg`
+        album.src = `./assets/images/${lowerCaseArtist}.jpg`
         console.log("printing src", album.src)
         document.getElementById("album-art").appendChild(album)
 
@@ -49,90 +49,87 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/apnabanale.jpg" height="40px">
+                            src="./assets/songs-img/apnabanale.jpg" height="40px">
                                         <h3>Apna Bana Le</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/Apna Bana Le - Arijit Singh.mp3"></audio>
+                                    <audio id="apnaBanaLeAudio" src="./assets/songs/Apna Bana Le - Arijit Singh.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/omahi.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/omahi.jpg"
                                             height="40px">
                                         <h3>O Maahi</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio
-                                        src="/Spotify-Clone/assets/songs/O Mahi O Mahi(PagalWorld.com.sb).mp3"></audio>
+                                    <audio id="omahiAudio"
+                                        src="./assets/songs/O Mahi O Mahi(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/heeriye.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/heeriye.jpg"
                                             height="40px">
                                         <h3>Heeriye</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/Heeriye - Arijit Singh.mp3"></audio>
+                                    <audio id="heeriyeAudio" src="./assets/songs/Heeriye - Arijit Singh.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/kesariya.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/kesariya.jpg"
                                             height="40px">
                                         <h3>Kesariya</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/Kesariya Tera Ishq Hai Piya.mp3"></audio>
+                                    <audio id="kesariyaAudio" src="./assets/songs/Kesariya Tera Ishq Hai Piya.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/terehawale.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/terehawale.jpg"
                                             height="40px">
                                         <h3>Tere Hawale</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
-                                    <audio
-                                        src="/Spotify-Clone/assets/songs/Tere Hawaale(PagalWorld.com.sb).mp3"></audio>
+                                    <audio id="terehawaleAudio"
+                                        src="./assets/songs/Tere Hawaale(PagalWorld.com.sb).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
-            
+
         }
         else if (lowerCaseArtist === 'aatifaslam') {
             const popularSongs = `<div class="song-list-3">           
@@ -142,87 +139,84 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/dekhtedekhte.jpg" height="40px">
+                            src="./assets/songs-img/dekhtedekhte.jpg" height="40px">
                                         <h3>Dekhte Dekhte</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/aatifaslam/Dekhte Dekhte - Deep House Mix_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/aatifaslam/Dekhte Dekhte - Deep House Mix_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/dildiyagalla.png"
+                                    <div class="songs-list"><img src="./assets/songs-img/dildiyagalla.png"
                                             height="40px">
                                         <h3>Dil Diya Gallan</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/aatifaslam/320kbps-TZH 2017 - Dil Diyan Gallan.mp3"></audio>
+                                        src="./assets/songs/aatifaslam/320kbps-TZH 2017 - Dil Diyan Gallan.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/tajdareharam.webp"
+                                    <div class="songs-list"><img src="./assets/songs-img/tajdareharam.webp"
                                             height="40px">
                                         <h3>Tajdar - E - Haram</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/aatifaslam/Tajdar E Haram Naat-(PagalSongs.Com.IN).mp3"></audio>
+                                    <audio src="./assets/songs/aatifaslam/Tajdar E Haram Naat-(PagalSongs.Com.IN).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/terahonelagahu.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/terahonelagahu.jpg"
                                             height="40px">
                                         <h3>Tera Hone Laga Hu</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/aatifaslam/Tera-Hone-Laga-Hoon_320(PagalWorldl).mp3"></audio>
+                                    <audio src="./assets/songs/aatifaslam/Tera-Hone-Laga-Hoon_320(PagalWorldl).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/teresangyara.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/teresangyara.jpg"
                                             height="40px">
                                         <h3>Tere Sang Yaara</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/aatifaslam/Oo-Karam-Khudaya-Ha(PagalWorld).mp3"></audio>
+                                        src="./assets/songs/aatifaslam/Oo-Karam-Khudaya-Ha(PagalWorld).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
         }
@@ -234,87 +228,84 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/jaiho.jpg" height="40px">
+                            src="./assets/songs-img/jaiho.jpg" height="40px">
                                         <h3>Jai Ho</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/arrahman/Jai Ho_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/arrahman/Jai Ho_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/jashnebahara.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/jashnebahara.jpg"
                                             height="40px">
                                         <h3>Jashan - E - Bahara</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/arrahman/Jashn E Bahaaraa - Jodhaa Akbar 320 Kbps.mp3"></audio>
+                                        src="./assets/songs/arrahman/Jashn E Bahaaraa - Jodhaa Akbar 320 Kbps.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/kunfayakun.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/kunfayakun.jpg"
                                             height="40px">
                                         <h3>Kun Faya Kun</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/arrahman/Kun-Faya-Kun_320(PagalWorldl).mp3"></audio>
+                                    <audio src="./assets/songs/arrahman/Kun-Faya-Kun_320(PagalWorldl).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/lukkachhuppi.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/lukkachhuppi.jpg"
                                             height="40px">
                                         <h3>Lukka Chhuppi</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/arrahman/Luka-Chuppi-Bohut-Hui(MrSong.In).mp3"></audio>
+                                    <audio src="./assets/songs/arrahman/Luka-Chuppi-Bohut-Hui(MrSong.In).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/maatujhesalam.webp"
+                                    <div class="songs-list"><img src="./assets/songs-img/maatujhesalam.webp"
                                             height="40px">
                                         <h3>Maa Tujhe Salaam</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/arrahman/Maa Tujhhe Salaam_320(Ghantalele.com).mp3"></audio>
+                                        src="./assets/songs/arrahman/Maa Tujhhe Salaam_320(Ghantalele.com).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
         }
@@ -326,87 +317,84 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/aajbhi.png" height="40px">
+                            src="./assets/songs-img/aajbhi.png" height="40px">
                                         <h3>Aaj Bhi</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/vishalmishra/new-320-Aaj Bhi - Vishal Mishra.mp3"></audio>
+                                    <audio src="./assets/songs/vishalmishra/new-320-Aaj Bhi - Vishal Mishra.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/zihaalemuskin.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/zihaalemuskin.jpg"
                                             height="40px">
                                         <h3>Zihal - E - Muskin</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/vishalmishra/Zihaal e Miskin_320(PagalWorld.com.sb).mp3"></audio>
+                                        src="./assets/songs/vishalmishra/Zihaal e Miskin_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/pehlebhimai.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/pehlebhimai.jpg"
                                             height="40px">
                                         <h3>Pehle Bhi Mai</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/vishalmishra/Pehle Bhi Main Remix - DJ Chetas X DJ NYK_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/vishalmishra/Pehle Bhi Main Remix - DJ Chetas X DJ NYK_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/jaanbangaye.png"
+                                    <div class="songs-list"><img src="./assets/songs-img/jaanbangaye.png"
                                             height="40px">
                                         <h3>Jaan Ban Gaye</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/vishalmishra/new-320-01 - Jaan Ban Gaye - Khuda Haafiz (2020).mp3"></audio>
+                                    <audio src="./assets/songs/vishalmishra/new-320-01 - Jaan Ban Gaye - Khuda Haafiz (2020).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/ekmulaqat.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/ekmulaqat.jpg"
                                             height="40px">
                                         <h3>Ek Mulaqaat</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/vishalmishra/Ek Mulaqaat_320(PagalWorld.com.sb).mp3"></audio>
+                                        src="./assets/songs/vishalmishra/Ek Mulaqaat_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
         }
@@ -418,87 +406,84 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/besharamrang.jpg" height="40px">
+                            src="./assets/songs-img/besharamrang.jpg" height="40px">
                                         <h3>Besharam Rang</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/vishalshekhar/Besharam Rang_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/vishalshekhar/Besharam Rang_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/nashesichadgayi.png"
+                                    <div class="songs-list"><img src="./assets/songs-img/nashesichadgayi.png"
                                             height="40px">
                                         <h3>Nashe Si Chad Gayi</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/vishalshekhar/bollywood-Befikre - Nashe Si Chadh Gayi.mp3"></audio>
+                                        src="./assets/songs/vishalshekhar/bollywood-Befikre - Nashe Si Chadh Gayi.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/jagghumeya.png"
+                                    <div class="songs-list"><img src="./assets/songs-img/jagghumeya.png"
                                             height="40px">
                                         <h3>Jag Ghumeya</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/vishalshekhar/bollywood-Sultan - Jag Ghoomeya.mp3"></audio>
+                                    <audio src="./assets/songs/vishalshekhar/bollywood-Sultan - Jag Ghoomeya.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/jhumejopathan.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/jhumejopathan.jpg"
                                             height="40px">
                                         <h3>Jhoome Jo Pathaan</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/vishalshekhar/Jhoome Jo Pathaan_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/vishalshekhar/Jhoome Jo Pathaan_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/ghungru.png"
+                                    <div class="songs-list"><img src="./assets/songs-img/ghungru.png"
                                             height="40px">
                                         <h3>Ghungru</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/vishalshekhar/new-320-01 - Ghungroo - War (2019).mp3"></audio>
+                                        src="./assets/songs/vishalshekhar/new-320-01 - Ghungroo - War (2019).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
         }
@@ -510,87 +495,84 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/vekamleya.jpg" height="40px">
+                            src="./assets/songs-img/vekamleya.jpg" height="40px">
                                         <h3>Ve Kamleya</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/pritam/Ve Kamleya(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/pritam/Ve Kamleya(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/omahi.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/omahi.jpg"
                                             height="40px">
                                         <h3>O Maahi</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/O Mahi O Mahi(PagalWorld.com.sb).mp3"></audio>
+                                        src="./assets/songs/O Mahi O Mahi(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/heeriye.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/heeriye.jpg"
                                             height="40px">
                                         <h3>Heeriye</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/Heeriye - Arijit Singh.mp3"></audio>
+                                    <audio src="./assets/songs/Heeriye - Arijit Singh.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/kesariya.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/kesariya.jpg"
                                             height="40px">
                                         <h3>Kesariya</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/Kesariya Tera Ishq Hai Piya.mp3"></audio>
+                                    <audio src="./assets/songs/Kesariya Tera Ishq Hai Piya.mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/terehawale.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/terehawale.jpg"
                                             height="40px">
                                         <h3>Tere Hawale</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/Tere Hawaale(PagalWorld.com.sb).mp3"></audio>
+                                        src="./assets/songs/Tere Hawaale(PagalWorld.com.sb).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
         }
@@ -602,91 +584,99 @@
                         <p>1</p>
                         </div>
                         <div class="songs-list" id="row1"><img
-                            src="/Spotify-Clone/assets/songs-img/anbenum.jpg" height="40px">
+                            src="./assets/songs-img/anbenum.jpg" height="40px">
                                         <h3>Anbenum</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272,727,219</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>4:21</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/anirudh/Anbenum_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/anirudh/Anbenum_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>2</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/badass.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/badass.jpg"
                                             height="40px">
                                         <h3>Badass</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>97,311,112</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/anirudh/Badass_320(PagalWorld.com.sb).mp3"></audio>
+                                        src="./assets/songs/anirudh/Badass_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>3</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/bloodysweet.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/bloodysweet.jpg"
                                             height="40px">
                                         <h3>Bloody Sweet</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>272, 511, 011</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:14</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/anirudh/Bloody Sweet_320(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/anirudh/Bloody Sweet_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>4</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/lokiverse.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/lokiverse.jpg"
                                             height="40px">
                                         <h3>Lokiverse</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>500,448,171</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>3:53</p>
                                     </div>
-                                    <audio src="/Spotify-Clone/assets/songs/anirudh/Lokiverse 2.0 (Leo)(PagalWorld.com.sb).mp3"></audio>
+                                    <audio src="./assets/songs/anirudh/Lokiverse 2.0 (Leo)(PagalWorld.com.sb).mp3"></audio>
                                 </div>
                                 <div class="row">
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
-                                    <div class="songs-list"><img src="/Spotify-Clone/assets/songs-img/zindabanda.jpg"
+                                    <div class="songs-list"><img src="./assets/songs-img/zindabanda.jpg"
                                             height="40px">
                                         <h3>Tere Hawale</h3>
                                     </div>
                                     <div class="song-info">
                                         <p>164,474,618</p>
                                     </div>
-                                    <div class="duration"><img src="/Spotify-Clone/assets/heart.svg" height="15px">
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
                                         <p>5:46</p>
                                     </div>
                                     <audio
-                                        src="/Spotify-Clone/assets/songs/anirudh/Zinda Banda Remix - DJ Wallston_320(PagalWorld.com.sb).mp3"></audio>
+                                        src="./assets/songs/anirudh/Zinda Banda Remix - DJ Wallston_320(PagalWorld.com.sb).mp3"></audio>
                                 </div>
-                                <div class="media-player"><audio
-                                        src="/Spotify-Clone/assets/songs-img/Heeriye - Arijit Singh.mp3"
-                                        controls></audio></div>
-                            </div>`
+                                `
             const popularSongsDiv = document.getElementById("song-ls")
             popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
         }
     }
+
+      // Add event listener to each row
+      const rows = document.getElementsByClassName("row")
+      for (let i = 0; i < rows.length; i++) {
+          rows[i].addEventListener("click", function() {
+              const audioElementId = this.getElementsByTagName("audio")[0].id
+              const audioElement = document.getElementById(audioElementId)
+              audioElement.play()
+          })
+      }
+  
 
 </script>
 
@@ -695,21 +685,19 @@
         <div class="left">
             <div class="nav tab">
                 <div class="logo">
-                    <img src="/Spotify-Clone/assets/images/logo.svg" alt="logo" />
+                    <img src="./assets/images/logo.svg" alt="logo" />
                 </div>
                 <div class="home">
                     <ul>
                         <li>
-                            <img src="/Spotify-Clone/assets/images/home.svg" alt="home" /><span><a
-                                    href="index.html">Home</a></span>
+                            <img src="./assets/images/home.svg" alt="home" /><span><a href="index.html">Home</a></span>
                         </li>
                     </ul>
                 </div>
                 <div class="search">
                     <ul>
                         <li>
-                            <img src="/Spotify-Clone/assets/images/search.svg" alt="search" /><span><a
-                                    href="#">Search</a></span>
+                            <img src="./assets/images/search.svg" alt="search" /><span><a href="#">Search</a></span>
                         </li>
                     </ul>
                 </div>
@@ -718,47 +706,46 @@
                 <div class="lib-logo">
                     <ul>
                         <li>
-                            <img src="/Spotify-Clone/assets/images/library.svg" alt="library" /><span>Your
+                            <img src="./assets/images/library.svg" alt="library" /><span>Your
                                 Library</span>
-                            <div class="plus"><img src="/Spotify-Clone/assets/plus.svg" alt="add to library"
-                                    id="plus" /></div>
+                            <div class="plus"><img src="./assets/plus.svg" alt="add to library" id="plus" /></div>
                         </li>
                     </ul>
                 </div>
                 <div class="albums">
-                    
-                        <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Arijit Singh')">
-                            <img src="/Spotify-Clone/assets/images/arijitsingh.jpg" alt="">
-                            <h3>Arijit Singh</h3>
-                        </div>
-                    
-                        <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Anirudh')">
-                            <img src="/Spotify-Clone/assets/images/anirudh.jpg" alt="">
-                            <h3>Anirudh</h3>
-                        </div>
-                    
-                        <div class="art-songs" id="art-songs" onclick="nextPageRedirect('A.R. Rahman')">
-                            <img src="/Spotify-Clone/assets/images/a.r.rahman.jpg" alt="">
-                            <h3>A.R. Rahman</h3>
-                        </div>
-                    
-                        <div class="art-songs"id="art-songs"  onclick="nextPageRedirect('Pritam')">
-                            <img src="/Spotify-Clone/assets/images/pritam.jpg" alt="">
-                            <h3>Pritam</h3>
-                        </div>
-                    
-                        <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Vishal Shekhar')">
-                            <img src="/Spotify-Clone/assets/images/vishalshekhar.jpg" alt="">
-                            <h3>Vishal-Shekhar</h3>
-                        </div>
-                        <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Vishal Mishra')">
-                            <img src="/Spotify-Clone/assets/images/vishalmishra.jpg" alt="">
-                            <h3>Vishal Mishra</h3>
-                        </div>
-                        <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Aatif Aslam')">
-                            <img src="/Spotify-Clone/assets/images/aatifaslam.jpg" alt="">
-                            <h3>Aatif Aslam</h3>
-                        </div>
+
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Arijit Singh')">
+                        <img src="./assets/images/arijitsingh.jpg" alt="">
+                        <h3>Arijit Singh</h3>
+                    </div>
+
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Anirudh')">
+                        <img src="./assets/images/anirudh.jpg" alt="">
+                        <h3>Anirudh</h3>
+                    </div>
+
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('A.R. Rahman')">
+                        <img src="./assets/images/a.r.rahman.jpg" alt="">
+                        <h3>A.R. Rahman</h3>
+                    </div>
+
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Pritam')">
+                        <img src="./assets/images/pritam.jpg" alt="">
+                        <h3>Pritam</h3>
+                    </div>
+
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Vishal Shekhar')">
+                        <img src="./assets/images/vishalshekhar.jpg" alt="">
+                        <h3>Vishal-Shekhar</h3>
+                    </div>
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Vishal Mishra')">
+                        <img src="./assets/images/vishalmishra.jpg" alt="">
+                        <h3>Vishal Mishra</h3>
+                    </div>
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Aatif Aslam')">
+                        <img src="./assets/images/aatifaslam.jpg" alt="">
+                        <h3>Aatif Aslam</h3>
+                    </div>
                 </div>
                 <div class="link-box">
                     <div class="links">
@@ -773,7 +760,7 @@
                         <a href="#">Cookies</a>
                     </div>
                     <div class="right-bot">
-                        <button><img src="/Spotify-Clone/assets/images/network.svg" alt="">
+                        <button><img src="./assets/images/network.svg" alt="">
                             <p>English</p>
                         </button>
                     </div>
@@ -784,10 +771,10 @@
             <div class="nav-22">
                 <div class="side-btn">
                     <button class="side-nav"><a href="#">
-                            <img src="/Spotify-Clone/assets/images/left.svg" alt="" /></a>
+                            <img src="./assets/images/left.svg" alt="" /></a>
                     </button>
                     <button class="side-nav">
-                        <img src="/Spotify-Clone/assets/images/right.svg" alt="" />
+                        <img src="./assets/images/right.svg" alt="" />
                     </button>
                 </div>
                 <div class="log-in">
@@ -802,7 +789,7 @@
                     </div>
 
                     <div class="art-name">
-                        <h2><img src="/Spotify-Clone/assets/verify-badge.png" fill="white" alt="">Verified Artist</h2>
+                        <h2><img src="./assets/verify-badge.png" fill="white" alt="">Verified Artist</h2>
                         <h1 id="art-name"></h1>
                         <p>37,627,452 monthly listeners</p>
                     </div>
@@ -816,12 +803,22 @@
                         <button class="follow">
                             <p>Follow</p>
                         </button>
-                        <img src="/Spotify-Clone/assets/dots.svg" height="30px" alt="">
+                        <img src="./assets/dots.svg" height="30px" alt="">
                     </div>
                     <div class="song-list-2">
                         <div class="song-ls" id="song-ls">
                             <h1>Popular</h1>
 
+                        </div>
+                        <div class="player">
+                            <div class="media">
+                                <div class="media-btn">
+                                    <button id="backward"><img src="./assets/backward.svg"  height="20px"></button>
+                                    <button id="play_pause-btn"><img src="./assets/play.svg" height="20px" id="pl-img"></button>
+                                    <button id="forward"><img src="./assets/forward.svg"  height="20px"></button>
+                                </div>
+                                <div class="seekbar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
