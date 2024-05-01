@@ -10,6 +10,7 @@ function changeImg() {
 
   let artist_name = document.getElementById("art-name");
   artist_name.innerText = `${content}`;
+  playimg.src = "./assets/pause.svg";
   if (lowerCaseArtist === "arijitsingh") {
     const popularSongs = `<div class="song-list-3">           
 
@@ -29,7 +30,7 @@ function changeImg() {
                               <div class="duration"><img src="./assets/heart.svg" height="15px">
                                   <p>4:21</p>
                               </div>
-                              <audio id="apnaBanaLeAudio" src="./assets/songs/Apna Bana Le - Arijit Singh.mp3"></audio>
+                              <audio id="apnaBanaLeAudio" data-song-name="Apna Bana Le - Arijit Singh "src="./assets/songs/Apna Bana Le - Arijit Singh.mp3"></audio>
                           </div>
                           <div class="row">
                                     <div class="sno">
@@ -99,24 +100,51 @@ function changeImg() {
                                 </div>
                           <!-- Add more rows here -->
                           `;
-                          
+
     const popularSongsDiv = document.getElementById("song-ls");
     popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
 
     // Add event listener to each row
-    
+
     const rows = document.getElementsByClassName("row");
     for (let i = 0; i < rows.length; i++) {
-        rows[i].addEventListener("click", function() {
-            const audioElementId = this.getElementsByTagName("audio")[0].id;
-            const audioElement = document.getElementById(audioElementId);
-        
-            if (currentAudio) {
-              currentAudio.pause();
+      rows[i].addEventListener("click", function () {
+        const audioElementId = this.getElementsByTagName("audio")[0].id;
+        const audioElement = document.getElementById(audioElementId);
+        const circleDiv = document.getElementById("circle");
+        if (circleDiv) {
+          audioElement.addEventListener("timeupdate", function () {
+            const duration = audioElement.duration;
+            const currentTime = audioElement.currentTime;
+            const percentage = (currentTime / duration) * 100;
+            circleDiv.style.left = `${percentage}%`;
+
+            function formatTime(time) {
+              const minutes = Math.floor(time / 60);
+              const seconds = Math.floor(time % 60);
+              return `${minutes}:${seconds.toString().padStart(2, "0")}`;
             }
-            currentAudio = audioElement;
-            audioElement.play();
+            const timeInfoDiv = document.getElementById("time-info");
+            timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+              duration
+            )}`;
+            console.log(timeInfoDiv)
           });
+        }
+
+        if (currentAudio) {
+          currentAudio.pause();
+        }
+        currentAudio = audioElement;
+        audioElement.play();
+
+        const songName = document.getElementById("info");
+        console.log(songName);
+        songName.innerText = songNames[i+1];
+
+        
+      });
+      controller()
     }
   } else if (lowerCaseArtist === "aatifaslam") {
     const popularSongs = `<div class="song-list-3">           
@@ -204,23 +232,55 @@ function changeImg() {
                                 src="./assets/songs/aatifaslam/Oo-Karam-Khudaya-Ha(PagalWorld).mp3"></audio>
                         </div>
                         `;
-    const popularSongsDiv = document.getElementById("song-ls");
-    popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
-
-    // Add event listener to each row
-    const rows = document.getElementsByClassName("row");
-    for (let i = 0; i < rows.length; i++) {
-      rows[i].addEventListener("click", function() {
-    const audioElementId = this.getElementsByTagName("audio")[0].id;
-    const audioElement = document.getElementById(audioElementId);
-
-    if (currentAudio) {
-      currentAudio.pause();
-    }
-    currentAudio = audioElement;
-    audioElement.play();
-  });
-    }
+                        const popularSongsDiv = document.getElementById("song-ls");
+                        popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+                    
+                        // Add event listener to each row
+                    
+                        const rows = document.getElementsByClassName("row");
+                        for (let i = 0; i < rows.length; i++) {
+                          rows[i].addEventListener("click", function () {
+                            const audioElementId = this.getElementsByTagName("audio")[0].id;
+                            const audioElement = document.getElementById(audioElementId);
+                            const circleDiv = document.getElementById("circle");
+                            
+                            if (circleDiv) {
+                              audioElement.addEventListener("timeupdate", function () {
+                                const duration = audioElement.duration;
+                                const currentTime = audioElement.currentTime;
+                                const percentage = (currentTime / duration) * 100;
+                                circleDiv.style.left = `${percentage}%`;
+                                
+                    
+                                function formatTime(time) {
+                                  const minutes = Math.floor(time / 60);
+                                  const seconds = Math.floor(time % 60);
+                                  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+                                }
+                                const timeInfoDiv = document.getElementById("time-info");
+                                timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+                                  duration
+                                )}`;
+                                console.log(timeInfoDiv)
+                              });
+                            }
+                    
+                            if (currentAudio) {
+                              currentAudio.pause();
+                            }
+                            currentAudio = audioElement;
+                            audioElement.play();
+                            
+                    
+                            const songName = document.getElementById("info");
+                            console.log(songName);
+                            songName.innerText = songNames[1];
+                    
+                            
+                          });
+                          controller()
+                          
+                        }
   } else if (lowerCaseArtist === "a.r.rahman") {
     const popularSongs = `<div class="song-list-3">           
         
@@ -307,22 +367,50 @@ function changeImg() {
                                 src="./assets/songs/arrahman/Maa Tujhhe Salaam_320(Ghantalele.com).mp3"></audio>
                         </div>
                         `;
-    const popularSongsDiv = document.getElementById("song-ls");
-    popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
-                  
+                        const popularSongsDiv = document.getElementById("song-ls");
+                        popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+                    
                         // Add event listener to each row
-                        const rows = document.getElementsByClassName("row")
+                    
+                        const rows = document.getElementsByClassName("row");
                         for (let i = 0; i < rows.length; i++) {
-                            rows[i].addEventListener("click", function() {
-                                const audioElementId = this.getElementsByTagName("audio")[0].id;
-                                const audioElement = document.getElementById(audioElementId);
-                            
-                                if (currentAudio) {
-                                  currentAudio.pause();
+                          rows[i].addEventListener("click", function () {
+                            const audioElementId = this.getElementsByTagName("audio")[0].id;
+                            const audioElement = document.getElementById(audioElementId);
+                            const circleDiv = document.getElementById("circle");
+                            if (circleDiv) {
+                              audioElement.addEventListener("timeupdate", function () {
+                                const duration = audioElement.duration;
+                                const currentTime = audioElement.currentTime;
+                                const percentage = (currentTime / duration) * 100;
+                                circleDiv.style.left = `${percentage}%`;
+                    
+                                function formatTime(time) {
+                                  const minutes = Math.floor(time / 60);
+                                  const seconds = Math.floor(time % 60);
+                                  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
                                 }
-                                currentAudio = audioElement;
-                                audioElement.play();
+                                const timeInfoDiv = document.getElementById("time-info");
+                                timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+                                  duration
+                                )}`;
+                                console.log(timeInfoDiv)
                               });
+                            }
+                    
+                            if (currentAudio) {
+                              currentAudio.pause();
+                            }
+                            currentAudio = audioElement;
+                            audioElement.play();
+                    
+                            const songName = document.getElementById("info");
+                            console.log(songName);
+                            songName.innerText = "Arijit Singh";
+                    
+                            
+                          });
+                          controller()
                         }
   } else if (lowerCaseArtist === "vishalmishra") {
     const popularSongs = `<div class="song-list-3">           
@@ -410,23 +498,50 @@ function changeImg() {
                                 src="./assets/songs/vishalmishra/Ek Mulaqaat_320(PagalWorld.com.sb).mp3"></audio>
                         </div>
                         `;
-    const popularSongsDiv = document.getElementById("song-ls");
-    popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
-
-                  
+                        const popularSongsDiv = document.getElementById("song-ls");
+                        popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+                    
                         // Add event listener to each row
-                        const rows = document.getElementsByClassName("row")
+                    
+                        const rows = document.getElementsByClassName("row");
                         for (let i = 0; i < rows.length; i++) {
-                            rows[i].addEventListener("click", function() {
-                                const audioElementId = this.getElementsByTagName("audio")[0].id;
-                                const audioElement = document.getElementById(audioElementId);
-                            
-                                if (currentAudio) {
-                                  currentAudio.pause();
+                          rows[i].addEventListener("click", function () {
+                            const audioElementId = this.getElementsByTagName("audio")[0].id;
+                            const audioElement = document.getElementById(audioElementId);
+                            const circleDiv = document.getElementById("circle");
+                            if (circleDiv) {
+                              audioElement.addEventListener("timeupdate", function () {
+                                const duration = audioElement.duration;
+                                const currentTime = audioElement.currentTime;
+                                const percentage = (currentTime / duration) * 100;
+                                circleDiv.style.left = `${percentage}%`;
+                    
+                                function formatTime(time) {
+                                  const minutes = Math.floor(time / 60);
+                                  const seconds = Math.floor(time % 60);
+                                  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
                                 }
-                                currentAudio = audioElement;
-                                audioElement.play();
+                                const timeInfoDiv = document.getElementById("time-info");
+                                timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+                                  duration
+                                )}`;
+                                console.log(timeInfoDiv)
                               });
+                            }
+                    
+                            if (currentAudio) {
+                              currentAudio.pause();
+                            }
+                            currentAudio = audioElement;
+                            audioElement.play();
+                    
+                            const songName = document.getElementById("info");
+                            console.log(songName);
+                            songName.innerText = songNames[1];
+                    
+                            
+                          });
+                          controller()
                         }
   } else if (lowerCaseArtist === "vishalshekhar") {
     const popularSongs = `<div class="song-list-3">           
@@ -514,24 +629,51 @@ function changeImg() {
                                 src="./assets/songs/vishalshekhar/new-320-01 - Ghungroo - War (2019).mp3"></audio>
                         </div>
                         `;
-                        const popularSongsDiv = document.getElementById("song-ls")
-                        popularSongsDiv.insertAdjacentHTML('beforeend', popularSongs)
-                  
+                        const popularSongsDiv = document.getElementById("song-ls");
+                        popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+                    
                         // Add event listener to each row
-                        const rows = document.getElementsByClassName("row")
+                    
+                        const rows = document.getElementsByClassName("row");
                         for (let i = 0; i < rows.length; i++) {
-                            rows[i].addEventListener("click", function() {
-                                const audioElementId = this.getElementsByTagName("audio")[0].id;
-                                const audioElement = document.getElementById(audioElementId);
-                            
-                                if (currentAudio) {
-                                  currentAudio.pause();
+                          rows[i].addEventListener("click", function () {
+                            const audioElementId = this.getElementsByTagName("audio")[0].id;
+                            const audioElement = document.getElementById(audioElementId);
+                            const circleDiv = document.getElementById("circle");
+                            if (circleDiv) {
+                              audioElement.addEventListener("timeupdate", function () {
+                                const duration = audioElement.duration;
+                                const currentTime = audioElement.currentTime;
+                                const percentage = (currentTime / duration) * 100;
+                                circleDiv.style.left = `${percentage}%`;
+                    
+                                function formatTime(time) {
+                                  const minutes = Math.floor(time / 60);
+                                  const seconds = Math.floor(time % 60);
+                                  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
                                 }
-                                currentAudio = audioElement;
-                                audioElement.play();
+                                const timeInfoDiv = document.getElementById("time-info");
+                                timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+                                  duration
+                                )}`;
+                                console.log(timeInfoDiv)
                               });
+                            }
+                    
+                            if (currentAudio) {
+                              currentAudio.pause();
+                            }
+                            currentAudio = audioElement;
+                            audioElement.play();
+                    
+                            const songName = document.getElementById("info");
+                            console.log(songName);
+                            songName.innerText = songNames[1];
+                    
+                            
+                          });
+                          controller()
                         }
-
   } else if (lowerCaseArtist === "pritam") {
     const popularSongs = `<div class="song-list-3">           
         
@@ -618,23 +760,51 @@ function changeImg() {
                                 src="./assets/songs/Tere Hawaale(PagalWorld.com.sb).mp3"></audio>
                         </div>
                         `;
-    const popularSongsDiv = document.getElementById("song-ls");
-    popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
-
-    // Add event listener to each row
-    const rows = document.getElementsByClassName("row");
-    for (let i = 0; i < rows.length; i++) {
-      rows[i].addEventListener("click", function() {
-    const audioElementId = this.getElementsByTagName("audio")[0].id;
-    const audioElement = document.getElementById(audioElementId);
-
-    if (currentAudio) {
-      currentAudio.pause();
-    }
-    currentAudio = audioElement;
-    audioElement.play();
-  });
-    }
+                        const popularSongsDiv = document.getElementById("song-ls");
+                        popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+                    
+                        // Add event listener to each row
+                    
+                        const rows = document.getElementsByClassName("row");
+                        for (let i = 0; i < rows.length; i++) {
+                          rows[i].addEventListener("click", function () {
+                            const audioElementId = this.getElementsByTagName("audio")[0].id;
+                            const audioElement = document.getElementById(audioElementId);
+                            const circleDiv = document.getElementById("circle");
+                            if (circleDiv) {
+                              audioElement.addEventListener("timeupdate", function () {
+                                const duration = audioElement.duration;
+                                const currentTime = audioElement.currentTime;
+                                const percentage = (currentTime / duration) * 100;
+                                circleDiv.style.left = `${percentage}%`;
+                    
+                                function formatTime(time) {
+                                  const minutes = Math.floor(time / 60);
+                                  const seconds = Math.floor(time % 60);
+                                  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+                                }
+                                const timeInfoDiv = document.getElementById("time-info");
+                                timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+                                  duration
+                                )}`;
+                                console.log(timeInfoDiv)
+                              });
+                            }
+                    
+                            if (currentAudio) {
+                              currentAudio.pause();
+                            }
+                            currentAudio = audioElement;
+                            audioElement.play();
+                    
+                            const songName = document.getElementById("info");
+                            console.log(songName);
+                            songName.innerText = songNames[1];
+                    
+                            
+                          });
+                          controller()
+                        }
   } else if (lowerCaseArtist === "anirudh") {
     const popularSongs = `<div class="song-list-3">           
         
@@ -652,7 +822,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>4:21</p>
                             </div>
-                            <audio id="anubemAudio" src="./assets/songs/anirudh/Anbenum_320(PagalWorld.com.sb).mp3"></audio>
+                            <audio id="anubemAudio" src="./assets/songs/anirudh/ANBENUM.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -669,7 +839,7 @@ function changeImg() {
                                 <p>3:53</p>
                             </div>
                             <audio id="badassAudio"
-                                src="./assets/songs/anirudh/Badass_320(PagalWorld.com.sb).mp3"></audio>
+                                src="./assets/songs/anirudh/Badass.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -685,7 +855,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>3:14</p>
                             </div>
-                            <audio id="bloodysweetAudio" src="./assets/songs/anirudh/Bloody Sweet_320(PagalWorld.com.sb).mp3"></audio>
+                            <audio id="bloodysweetAudio" src="./assets/songs/anirudh/Bloody Sweet.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -701,7 +871,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>3:53</p>
                             </div>
-                            <audio id="lokiverseAudio" src="./assets/songs/anirudh/Lokiverse 2.0 (Leo)(PagalWorld.com.sb).mp3"></audio>
+                            <audio id="lokiverseAudio" src="./assets/songs/anirudh/Lokiverse 2.0.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -718,15 +888,66 @@ function changeImg() {
                                 <p>5:46</p>
                             </div>
                             <audio id="zindabandaAudio"
-                                src="./assets/songs/anirudh/Zinda Banda Remix - DJ Wallston_320(PagalWorld.com.sb).mp3"></audio>
+                                src="./assets/songs/anirudh/Zinda Banda Remix.mp3"></audio>
                         </div>
                         `;
     const popularSongsDiv = document.getElementById("song-ls");
     popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
     const rows = document.getElementsByClassName("row");
     for (let i = 0; i < rows.length; i++) {
-      rows[i].addEventListener("click", function() {
-    const audioElementId = this.getElementsByTagName("audio")[0].id;
+      rows[i].addEventListener("click", function () {
+        const audioElementId = this.getElementsByTagName("audio")[0].id;
+        const audioElement = document.getElementById(audioElementId);
+        const circleDiv = document.getElementById("circle");
+        if (circleDiv) {
+            audioElement.addEventListener("timeupdate", function () {
+              const duration = audioElement.duration;
+              const currentTime = audioElement.currentTime;
+              const percentage = (currentTime / duration) * 100;
+              circleDiv.style.left = `${percentage}%`;
+  
+              function formatTime(time) {
+                const minutes = Math.floor(time / 60);
+                const seconds = Math.floor(time % 60);
+                return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+              }
+              const timeInfoDiv = document.getElementById("time-info");
+              timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+                duration
+              )}`;
+              console.log(timeInfoDiv)
+            });
+          }
+
+        if (currentAudio) {
+          currentAudio.pause();
+        }
+        currentAudio = audioElement;
+        audioElement.play();
+        controller()
+      });
+    }
+  }
+}
+
+
+let currentAudio = null;
+playimg = document.getElementById("pl-img");
+const pause = document.getElementById("play_pause-btn");
+pause.addEventListener("click", () => {
+  if (currentAudio.paused) {
+    currentAudio.play();
+    playimg.src = "./assets/pause.svg";
+  } else {
+    currentAudio.pause();
+    playimg.src = "./assets/play.svg";
+  }
+});
+
+const songLsDiv = document.getElementById("song-ls");
+songLsDiv.addEventListener("click", function (event) {
+  if (event.target.classList.contains("row")) {
+    const audioElementId = event.target.getElementsByTagName("audio")[0].id;
     const audioElement = document.getElementById(audioElementId);
 
     if (currentAudio) {
@@ -734,20 +955,64 @@ function changeImg() {
     }
     currentAudio = audioElement;
     audioElement.play();
-  });
-    }
   }
+});
+
+async function main() {
+  let a = await fetch("/Spotify-Clone/assets/songs/arijit/");
+  let response = await a.text();
+  console.log(response);
 }
-let currentAudio = null;
-playimg = document.getElementById("pl-img")
-const pause = document.getElementById("play_pause-btn")
-pause.addEventListener("click", ()=>{
-    if (currentAudio.paused) {
-        currentAudio.play();
-        playimg.src = "./assets/pause.svg";
-      }
-      else {
-        currentAudio.pause();
-        playimg.src = "./assets/play.svg";
-      }
-}) 
+
+function controller() {
+  const forward = document.getElementById("forward");
+  forward.addEventListener("click", () => {
+    const index = Array.from(
+      document.getElementsByClassName("row")
+    ).indexOf(currentAudio.closest(".row"));
+    const nextSong = Array.from(document.getElementsByClassName("row"))[
+      index + 1
+    ];
+    if (nextSong) {
+      const nextAudio = nextSong.getElementsByTagName("audio")[0];
+      currentAudio.pause();
+      currentAudio = nextAudio;
+      currentAudio.play();
+    }
+  });
+  const backward = document.getElementById("backward");
+  backward.addEventListener("click", () => {
+    const index = Array.from(
+      document.getElementsByClassName("row")
+    ).indexOf(currentAudio.closest(".row"));
+    const nextSong = Array.from(document.getElementsByClassName("row"))[
+      index - 1
+    ];
+    if (nextSong) {
+      const nextAudio = nextSong.getElementsByTagName("audio")[0];
+      playimg = document.getElementById("pl-img");
+      currentAudio.pause();
+      currentAudio = nextAudio;
+      currentAudio.play();
+    }
+  });
+}
+
+let songNames;
+
+fetch("./assets/songs/arijit/")
+  .then(response => response.text())
+  .then(htmlContent => {
+    let parser = new DOMParser();
+    let htmlDoc = parser.parseFromString(htmlContent, 'text/html');
+    let songLinks = htmlDoc.querySelectorAll('#files .name');
+    songNames = [];
+    songLinks.forEach(link => {
+      let songName = link.textContent;
+      songName = songName.replace('.mp3', '');
+      songName = songName.replace(/b/g, '');
+      songNames.push(songName.trim());
+    });
+    console.log(songNames);
+  })
+  .catch(error => console.error('Error fetching songs:', error));

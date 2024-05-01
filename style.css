@@ -595,18 +595,20 @@ button{
 .player{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .media{
     border-radius: 8px;
-    height: 60px;
+    height: 80px;
     width: 76%;
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    /* background-color: #202020; */
 }
 .media-btn{
     display: flex;
@@ -628,9 +630,32 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 .seekbar{
     width: 98%;
     height: 3px;
     background-color: #fff;
+    position: absolute;
+    bottom: 10px;
+}
+.circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    bottom: -6px;
+}
+.song-name{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: #fff;
+}
+#time-info{
+    color: #fff;
+    position: absolute;
+    right: 40px;
+    top: 30px;
 }
