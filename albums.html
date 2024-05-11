@@ -27,7 +27,11 @@
 <script>
     function nextPageRedirect(pritam) {
         window.location.href = `albums.html?content=${pritam}`
-        
+
+    }
+    function nextPageRedirect(pritam) {
+        window.location.href = `albums.html?content=${pritam}`
+
     }
     function changeImg() {
         const param = new URLSearchParams(window.location.search)
@@ -38,24 +42,24 @@
         album.src = `./assets/images/${lowerCaseArtist}.jpg`
         console.log("printing src", album.src)
         document.getElementById("album-art").appendChild(album)
-        
+
 
         let artist_name = document.getElementById("art-name")
         artist_name.innerText = `${content}`
-        
+
     }
 
-      // Add event listener to each row
-      const rows = document.getElementsByClassName("row")
-      for (let i = 0; i < rows.length; i++) {
-          rows[i].addEventListener("click", function() {
-              const audioElementId = this.getElementsByTagName("audio")[0].id
-              const audioElement = document.getElementById(audioElementId)
-              
-              audioElement.play()
-          })
-      }
-  
+    // Add event listener to each row
+    const rows = document.getElementsByClassName("row")
+    for (let i = 0; i < rows.length; i++) {
+        rows[i].addEventListener("click", function () {
+            const audioElementId = this.getElementsByTagName("audio")[0].id
+            const audioElement = document.getElementById(audioElementId)
+
+            audioElement.play()
+        })
+    }
+
 
 </script>
 
@@ -149,7 +153,7 @@
         <div class="right tab-22">
             <div class="nav-22">
                 <div class="side-btn">
-                    <button class="side-nav"><a href="#">
+                    <button class="side-nav" onclick="nextPageRedirect()"><a href="#">
                             <img src="./assets/images/left.svg" alt="" /></a>
                     </button>
                     <button class="side-nav">
@@ -191,12 +195,20 @@
                         </div>
                         <div class="player">
                             <div class="media">
-                                <div class="song-name"><p id="info"></p></div>
-                                <div><p id="time-info">00:00/00:00</p></div>
+                                <div class="song-name">
+                                    <p id="info"></p>
+                                </div>
+                                <div>
+                                    <p id="time-info">00:00/00:00</p>
+                                </div>
+                                <div class="range">
+                                    <input id="vol" type="range">
+                                </div>
                                 <div class="media-btn">
-                                    <button id="backward"><img src="./assets/backward.svg"  height="20px"></button>
-                                    <button id="play_pause-btn"><img src="./assets/play.svg" height="20px" id="pl-img"></button>
-                                    <button id="forward"><img src="./assets/forward.svg"  height="20px"></button>
+                                    <button id="backward"><img src="./assets/backward.svg" height="20px"></button>
+                                    <button id="play_pause-btn"><img src="./assets/play.svg" height="20px"
+                                            id="pl-img"></button>
+                                    <button id="forward"><img src="./assets/forward.svg" height="20px"></button>
                                 </div>
                                 <div class="seekbar">
                                     <div class="circle" id="circle"></div>
@@ -209,6 +221,7 @@
         </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js">
+</script>
 
 </html>
