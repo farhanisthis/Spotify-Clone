@@ -1002,7 +1002,7 @@ let allSongNames = {};
 let SongNames = [];
 
 artists.forEach((artist) => {
-  fetch(`/assets/songs/arijit/`)
+  fetch(`/assets/songs/${artist}/`)
     .then((response) => response.text())
     .then((htmlContent) => {
       let parser = new DOMParser();
