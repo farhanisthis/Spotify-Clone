@@ -89,8 +89,8 @@
     position: absolute;
     z-index: 10;
     height: 100vh;
-    width: 75vw;
-    left: -340px;
+    width: 85vw;
+    left: -370px;
     transform: translateX(0);
     transition: transform ease-in-out 0.5s;
     color: #fff;
@@ -100,8 +100,8 @@
     position: absolute;
     z-index: 10;
     height: 100vh;
-    width: 75vw;
-    left: -340px;
+    width: 85vw;
+    left: -370px;
     transform: translateX(100%);
     transition: transform ease-in-out 0.5s;
     color: #fff;
@@ -109,7 +109,7 @@
   .bar-songs {
     position: relative;
     top: 30px;
-    left: 60px;
+    left: 40px;
     h1{
         font-size: 25px;
         margin-left: 20px;

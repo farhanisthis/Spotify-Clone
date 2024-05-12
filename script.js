@@ -287,7 +287,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>4:21</p>
                             </div>
-                            <audio id="jaihoAudio" src="./assets/songs/arrahman/Jai Ho_320(PagalWorld.com.sb).mp3"></audio>
+                            <audio id="jaihoAudio" src="./assets/songs/arrahman/Jai Ho.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -304,7 +304,7 @@ function changeImg() {
                                 <p>3:53</p>
                             </div>
                             <audio id="jashnebaharaAudio"
-                                src="./assets/songs/arrahman/Jashn E Bahaaraa - Jodhaa Akbar 320 Kbps.mp3"></audio>
+                                src="./assets/songs/arrahman/Jashn E Bahaaraa.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -320,7 +320,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>3:14</p>
                             </div>
-                            <audio id="kunfayaAudio" src="./assets/songs/arrahman/Kun-Faya-Kun_320(PagalWorldl).mp3"></audio>
+                            <audio id="kunfayaAudio" src="./assets/songs/arrahman/Kun Faya Kun.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -336,7 +336,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>3:53</p>
                             </div>
-                            <audio id="lukachupiAudio" src="./assets/songs/arrahman/Luka-Chuppi-Bohut-Hui(MrSong.In).mp3"></audio>
+                            <audio id="lukachupiAudio" src="./assets/songs/arrahman/Luka Chuppi Bohut Hui.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -353,7 +353,7 @@ function changeImg() {
                                 <p>5:46</p>
                             </div>
                             <audio id="maatujhesalamAudio"
-                                src="./assets/songs/arrahman/Maa Tujhhe Salaam_320(Ghantalele.com).mp3"></audio>
+                                src="./assets/songs/arrahman/Maa Tujhhe Salaam.mp3"></audio>
                         </div>
                         `;
     const popularSongsDiv = document.getElementById("song-ls");
