@@ -419,7 +419,7 @@ function changeImg() {
                             </div>
                             <div class="row">
                                 <div class="sno">
-                                    <p>5</p>
+                                    <p>2</p>
                                 </div>
                                 <div class="songs-list"><img src="./assets/songs-img/ekmulaqat.jpg"
                                         height="40px">
@@ -436,7 +436,7 @@ function changeImg() {
                             </div>
                             <div class="row">
                             <div class="sno">
-                            <p>4</p>
+                            <p>3</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/jaanbangaye.png"
                             height="40px">
@@ -452,7 +452,7 @@ function changeImg() {
                             </div>
                             <div class="row">
                             <div class="sno">
-                            <p>3</p>
+                            <p>4</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/pehlebhimai.jpg"
                             height="40px">
@@ -468,7 +468,7 @@ function changeImg() {
                             </div>
                         <div class="row">
                             <div class="sno">
-                                <p>2</p>
+                                <p>5</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/zihaalemuskin.jpg"
                                     height="40px">
@@ -547,7 +547,7 @@ function changeImg() {
                         </div>
                         <div class="row">
                             <div class="sno">
-                                <p>5</p>
+                                <p>2</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/ghungru.png"
                                     height="40px">
@@ -596,7 +596,7 @@ function changeImg() {
                         </div>
                         <div class="row">
                             <div class="sno">
-                                <p>2</p>
+                                <p>5</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/nashesichadgayi.png"
                                     height="40px">
@@ -706,7 +706,7 @@ function changeImg() {
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>3:14</p>
                             </div>
-                            <audio id="heeriyeAudio" src="./assets/songs/pritam/Phir Aur Kya Chahiye.MP3"></audio>
+                            <audio id="heeriyeAudio" src="./assets/songs/pritam/Phir Aur Kya Chahiye.mp3"></audio>
                         </div>
                         <div class="row">
                             <div class="sno">
@@ -979,11 +979,9 @@ function controller() {
 }
 
 function openSideBar() {
-  let bar = document.getElementById("sidebar")
-  let act = document.getElementsByClassName("active")
-  bar.classList.toggle("active")
-  bar.classList.toggle("sidebar")
-
+    let bar = document.getElementById("sidebar");
+    bar.classList.toggle("active");
+    bar.classList.toggle("sidebar");
 }
 
 let artistsList = [
