@@ -65,6 +65,9 @@
 </script>
 
 <body onload="changeImg()">
+    <div class="sidebar active" id="sidebar" onclick="openSideBar()">
+        <p>This is sidebar</p>
+    </div>
     <div class="container">
         <div class="left">
             <div class="nav tab">
@@ -152,7 +155,7 @@
             </div>
         </div>
         <div class="right tab-22">
-            <div class="nav-22">
+            <div class="nav-22" onclick="openSideBar()">
                 <div class="logo-nav">
                     <img src="./assets/images/logo.svg" alt="logo" />
                   </div>

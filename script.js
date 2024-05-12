@@ -661,7 +661,7 @@ function changeImg() {
     
                             <div class="row">
                             <div class="sno">
-                                <p>4</p>
+                                <p>1</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/kesariya.jpg"
                                     height="40px">
@@ -710,7 +710,7 @@ function changeImg() {
                         </div>
                         <div class="row">
                             <div class="sno">
-                                <p>5</p>
+                                <p>4</p>
                             </div>
                             <div class="songs-list"><img src="./assets/songs-img/shayad.png"
                                     height="40px">
@@ -727,7 +727,7 @@ function changeImg() {
                         </div>
                         <div class="row">
                             <div class="sno">
-                            <p>1</p>
+                            <p>5</p>
                             </div>
                             <div class="songs-list" id="row1"><img
                                 src="./assets/songs-img/vekamleya.jpg" height="40px">
@@ -978,7 +978,10 @@ function controller() {
   });
 }
 
-
+function openSideBar() {
+  let bar = document.getElementById("sidebar")
+  bar.classList.toggle("active")
+}
 
 let artistsList = [
   "Arijit Singh",

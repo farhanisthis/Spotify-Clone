@@ -75,6 +75,15 @@
 }
 /* Album section */
 @media screen and (max-width: 450px) {
+    .active{
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 50vw;
+    }
+
+
+
     .tab-22{
         height: 100vh;
         width: 100vw;
@@ -95,15 +104,18 @@
             width: 150px;
         };
     }
-        .art-name{
-            h1{
-                font-size: 5rem;
-            }
-            h2{
-
-            }
-        }
+}
+.art-name{
+    position: relative;
+    top: -10px;
+    h1{
+        font-size: 3rem;
+        letter-spacing: normal;
     }
+    h2{
+
+    }
+}
     .song-list {
         height: 50vh;
     }
@@ -153,10 +165,10 @@
     
 }
 .song-name {
-    position: absolute;
-    left: 65px;
-    top: -20px;
-    color: #fff;
+    position: relative;
+        left: 0;
+        top: -45px;
+        color: #fff;
 }
 .time-info{
     position: relative;
