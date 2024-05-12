@@ -9,12 +9,13 @@
         display: none;
         }
         .nav-2 .logo-nav {
+            margin-left: 10px;
             display: flex;
             align-items: center;
             img{
                 height: 40px;
             }
-        }
+        }    
     .bottom-bar{
         display: none;
     }
@@ -38,11 +39,14 @@
         margin-left: -35px;
         justify-content: center;
         position: relative;
-        bottom: -24px;
+        bottom: -25px;
         width: 190px;
         background-color: rgba(0, 0, 0, 0.63);
         border-radius: 5px;
 
+    }
+    .sign-in{
+        margin-right: 10px;
     }
     .artist{
         flex-wrap: wrap;
@@ -68,4 +72,109 @@
         margin: 7px 10px;
         
     }
+}
+/* Album section */
+@media screen and (max-width: 450px) {
+    .tab-22{
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+    }
+    .side-btn{
+        display: none;
+    }
+    .art-info{
+        width: 100vw;
+        align-items: baseline;
+        .art-img{
+            height: 100%;
+            position: relative;
+            bottom: -122px;
+            img{
+            height: 150px;
+            width: 150px;
+        };
+    }
+        .art-name{
+            h1{
+                font-size: 5rem;
+            }
+            h2{
+
+            }
+        }
+    }
+    .song-list {
+        height: 50vh;
+    }
+    .song-ls {
+        h1 {
+            font-size: 24px;
+            padding: 10px;
+        }
+}
+.btns {
+    align-items: center;
+    height: 70px;
+    display: flex;
+    width: 270px;
+    justify-content: space-evenly;
+}
+.nav-22 .side-btn{
+    display: none;
+    }
+    .nav-22 .logo-nav {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        img{
+            height: 40px;
+        }
+    }  
+    .song-list-3{
+        width: 100vw;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        .row{
+            width: 88vw;
+            padding: 8px 15px;
+            .song-info{
+                display: none;
+            }
+            .songs-list {
+                img {
+                    border-radius: 3px;
+                    height: 50px;
+                }
+            }
+            
+    }
+    
+}
+.song-name {
+    position: absolute;
+    left: 65px;
+    top: -20px;
+    color: #fff;
+}
+.time-info{
+    position: relative;
+    right: -240px;
+    top: -18px;
+}
+#time-info{
+    height: 30px;
+    width: 90px;
+}
+.range{
+    display: none;
+}
+.seekbar {
+    width: 125%;
+}
+.media-btn {
+    top: 10;
+    position: absolute;
+}
 }
