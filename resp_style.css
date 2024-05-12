@@ -86,9 +86,9 @@
     h1{
       font-size: 25px;
       position: relative;
-      right: -50px;
+      right: -35px;
       top: 25px;
-  }
+    }
   }
   .active {
     background: rgba(0, 0, 0, 0.89);
@@ -117,7 +117,7 @@
     top: 30px;
     height: 60vh;
     width: 70vw;
-    left: 15vw;
+    left: 5vw;
     overflow: scroll;
   }
   .art-songs {
@@ -229,5 +229,28 @@
   .media-btn {
     top: 10;
     position: absolute;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bar-songs {
+    position: relative;
+    top: 30px;
+    height: 60vh;
+    width: 70vw;
+    left: 15vw;
+    overflow: scroll;
+  }
+  .container-bar {
+    display: contents;
+    h1{
+      font-size: 25px;
+      position: relative;
+      right: -52px;
+      top: 25px;
+    }
+  }
+  .nav{
+    left: 20px;
   }
 }
