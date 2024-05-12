@@ -207,6 +207,9 @@ span{
     margin: 8px 8px 8px 0;
 }
 .nav-2{
+    .logo-nav{
+        display: none;
+    }
     background-color: #101010;
     display: flex;
     justify-content: space-between;
