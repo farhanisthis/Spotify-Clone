@@ -980,7 +980,10 @@ function controller() {
 
 function openSideBar() {
   let bar = document.getElementById("sidebar")
+  let act = document.getElementsByClassName("active")
   bar.classList.toggle("active")
+  bar.classList.toggle("sidebar")
+
 }
 
 let artistsList = [
