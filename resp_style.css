@@ -109,11 +109,14 @@
   .bar-songs {
     position: relative;
     top: 30px;
-    left: 40px;
+    height: 60vh;
+    width: 70vw;
+    left: 15vw;
     h1{
         font-size: 25px;
         margin-left: 20px;
     }
+    overflow: scroll;
   }
   .art-songs {
     margin: 10px 15px;
