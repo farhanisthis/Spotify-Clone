@@ -30,10 +30,6 @@
         window.location.href = `albums.html?content=${pritam}`
 
     }
-    function nextPageRedirect(pritam) {
-        window.location.href = `albums.html?content=${pritam}`
-
-    }
     function changeImg() {
         const param = new URLSearchParams(window.location.search)
         const content = param.get('content')
@@ -98,6 +94,10 @@
                     <h3>A.R. Rahman</h3>
                 </div>
     
+                <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Sonu Nigam')">
+                    <img src="./assets/images/sonunigam.jpg" alt="">
+                    <h3>Sonu Nigam</h3>
+                </div>
                 <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Pritam')">
                     <img src="./assets/images/pritam.jpg" alt="">
                     <h3>Pritam</h3>
@@ -171,8 +171,8 @@
                         <h3>Pritam</h3>
                     </div>
 
-                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Vishal Shekhar')">
-                        <img src="./assets/images/vishalshekhar.jpg" alt="">
+                    <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Sonu Nigam')">
+                        <img src="./assets/images/sonunigam.png" alt="">
                         <h3>Vishal-Shekhar</h3>
                     </div>
                     <div class="art-songs" id="art-songs" onclick="nextPageRedirect('Vishal Mishra')">
@@ -205,9 +205,9 @@
             </div>
         </div>
         <div class="right tab-22">
-            <div class="nav-22" onclick="openSideBar()">
-                <div class="logo-nav">
-                    <img src="./assets/images/logo.svg" alt="logo" />
+            <div class="nav-22" >
+                <div class="logo-nav" onclick="openSideBar()">
+                    <img src="./assets/images/logo.svg" alt="logo"  />
                   </div>
                 <div class="side-btn">
                     <button class="side-nav" onclick="nextPageRedirect()"><a href="#">
@@ -248,7 +248,6 @@
                     <div class="song-list-2">
                         <div class="song-ls" id="song-ls">
                             <h1>Popular</h1>
-
                         </div>
                         <div class="player">
                             <div class="media">

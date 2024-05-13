@@ -40,11 +40,11 @@
       display: none;
     }
     display: flex;
-    margin-left: -35px;
+    margin-left: -20px;
     justify-content: center;
     position: relative;
-    bottom: -25px;
-    width: 190px;
+    bottom: 0px;
+    width: 160px;
     background-color: rgba(0, 0, 0, 0.63);
     border-radius: 5px;
   }
@@ -52,9 +52,12 @@
     margin-right: 10px;
   }
   .artist {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     margin: 0;
+    overflow: scroll;
+    height: 190px;
+    width: 400px;
   }
   .hover-btn {
     display: none;
@@ -63,16 +66,20 @@
     height: 120px;
     width: 120px;
     img {
-      height: 190px;
-      width: 190px;
+      height: 160px;
+      width: 160px;
       margin: 0px;
       border-radius: 5px;
     }
   }
+  .showAll{
+    height: 100;
+    flex-wrap: wrap;
+  }
   .song {
     height: 190px;
     width: 125px;
-    margin: 7px 10px;
+    margin: 7px 29px;
   }
 }
 /* Album section */

@@ -83,6 +83,23 @@ function changeImg() {
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
+                                    <div class="songs-list"><img src="./assets/songs-img/pal.jpg"
+                                            height="40px">
+                                        <h3>Pal</h3>
+                                    </div>
+                                    <div class="song-info">
+                                        <p>164,474,618</p>
+                                    </div>
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                        <p>5:46</p>
+                                    </div>
+                                    <audio id="terehawaleAudio"
+                                        src="./assets/songs/arijit/Pal.mp3"></audio>
+                                </div>
+                                <div class="row">
+                                    <div class="sno">
+                                        <p>6</p>
+                                    </div>
                                     <div class="songs-list"><img src="./assets/songs-img/terehawale.jpg"
                                             height="40px">
                                         <h3>Tere Hawale</h3>
@@ -408,6 +425,135 @@ function changeImg() {
     <div class="songs-list" id="row1"><img
                     src="./assets/songs-img/aajbhi.png" height="40px">
                                 <h3>Aaj Bhi</h3>
+                            </div>
+                            <div class="song-info">
+                            <p>272,727,219</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                            <p>4:21</p>
+                            </div>
+                            <audio id="aajbhiAudio" src="./assets/songs/vishalmishra/Aaj Bhi.mp3"></audio>
+                            </div>
+                            <div class="row">
+                                <div class="sno">
+                                    <p>2</p>
+                                </div>
+                                <div class="songs-list"><img src="./assets/songs-img/ekmulaqat.jpg"
+                                        height="40px">
+                                    <h3>Ek Mulaqaat</h3>
+                                </div>
+                                <div class="song-info">
+                                    <p>164,474,618</p>
+                                </div>
+                                <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                    <p>5:46</p>
+                                </div>
+                                <audio id="ekmulaqatAudio"
+                                    src="./assets/songs/vishalmishra/Ek Mulaqaat.mp3"></audio>
+                            </div>
+                            <div class="row">
+                            <div class="sno">
+                            <p>3</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/jaanbangaye.png"
+                            height="40px">
+                            <h3>Jaan Ban Gaye</h3>
+                            </div>
+                            <div class="song-info">
+                            <p>500,448,171</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                            <p>3:53</p>
+                            </div>
+                            <audio id="jaanbangayeAudio" src="./assets/songs/vishalmishra/Jaan Ban Gaye.mp3"></audio>
+                            </div>
+                            <div class="row">
+                            <div class="sno">
+                            <p>4</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/pehlebhimai.jpg"
+                            height="40px">
+                            <h3>Pehle Bhi Mai</h3>
+                            </div>
+                            <div class="song-info">
+                            <p>272, 511, 011</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                            <p>3:14</p>
+                            </div>
+                            <audio id="pehlebhimaiAudio" src="./assets/songs/vishalmishra/Pehle Bhi Main.mp3"></audio>
+                            </div>
+                        <div class="row">
+                            <div class="sno">
+                                <p>5</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/zihaalemuskin.jpg"
+                                    height="40px">
+                                <h3>Zihal - E - Muskin</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>97,311,112</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>3:53</p>
+                            </div>
+                            <audio id="zihaleAudio"
+                                src="./assets/songs/vishalmishra/Zihaal e Miskin.mp3"></audio>
+                        </div>
+                        `;
+    const popularSongsDiv = document.getElementById("song-ls");
+    popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+
+    // Add event listener to each row
+
+    const rows = document.getElementsByClassName("row");
+    for (let i = 0; i < rows.length; i++) {
+      rows[i].addEventListener("click", function () {
+        const audioElementId = this.getElementsByTagName("audio")[0].id;
+        const audioElement = document.getElementById(audioElementId);
+        const circleDiv = document.getElementById("circle");
+        if (circleDiv) {
+          audioElement.addEventListener("timeupdate", function () {
+            const duration = audioElement.duration;
+            const currentTime = audioElement.currentTime;
+            const percentage = (currentTime / duration) * 100;
+            circleDiv.style.left = `${percentage}%`;
+
+            function formatTime(time) {
+              const minutes = Math.floor(time / 60);
+              const seconds = Math.floor(time % 60);
+              return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+            }
+            const timeInfoDiv = document.getElementById("time-info");
+            timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+              duration
+            )}`;
+          });
+        }
+
+        if (currentAudio) {
+          currentAudio.pause();
+        }
+        currentAudio = audioElement;
+        audioElement.play();
+
+        const songName = document.getElementById("info");
+        let artist = "vishalmishra";
+        songName.innerText = allSongNames[artist][i + 1];
+      });
+      controller();
+    }
+  } else if (lowerCaseArtist === "vishalshekhar") {
+  } else if (lowerCaseArtist === "SonuNigam") {
+    const popularSongs = `<div class="song-list-3">           
+        
+    <div class="row">
+    <div class="sno">
+    <p>1</p>
+    </div>
+    <div class="songs-list" id="row1"><img
+                    src="./assets/songs-img/aajbhi.png" height="40px">
+                                <h3>Papa Meri Jaan</h3>
                             </div>
                             <div class="song-info">
                             <p>272,727,219</p>
@@ -1042,3 +1188,9 @@ document
         .src.replace("mute.svg", "volume.svg");
     }
   });
+
+  function showAll(){
+    let allSongs = document.querySelector(".artist");
+    allSongs.classList.toggle("showAll")
+    document.getElementById("show").innerText = "Show Less"
+  }
