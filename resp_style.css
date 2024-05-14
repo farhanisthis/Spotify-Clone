@@ -52,6 +52,8 @@
     margin-right: 10px;
   }
   .artist {
+    width: 100%;
+    height: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0;
@@ -102,27 +104,28 @@
     width: 85vw;
     left: -370px;
     transform: translateX(0);
-    transition: transform ease-in-out 0.5s;
+    transition: transform ease-in-out 0.3s;
     color: #fff;
   }
   .sidebar {
-    background: rgba(0, 0, 0, 0.89);
+    background: rgb(0, 0, 0);
     position: absolute;
     z-index: 10;
     height: 100vh;
     width: 85vw;
     left: -370px;
     transform: translateX(100%);
-    transition: transform ease-in-out 0.5s;
+    transition: transform ease-in-out 0.3s;
     color: #fff;
   }
+  .songs{width: 100vw;}
   .bar-songs {
     position: relative;
     top: 30px;
     height: 60vh;
     width: 70vw;
     left: 5vw;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .art-songs {
     margin: 10px 15px;

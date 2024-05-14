@@ -398,6 +398,134 @@ function changeImg() {
       });
       controller();
     }
+  }else if (lowerCaseArtist === "sonunigam") {
+    const popularSongs = `<div class="song-list-3">           
+        
+        <div class="row">
+            <div class="sno">
+                <p>1</p>
+                </div>
+                <div class="songs-list" id="row1"><img
+                    src="./assets/songs-img/papamerijaan.jpg" height="40px">
+                                <h3>Papa Meri Jaan</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>272,727,219</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>4:21</p>
+                            </div>
+                            <audio id="jaihoAudio" src="./assets/songs/sonunigam/Papa Meri Jaan.mp3"></audio>
+                        </div>
+                        <div class="row">
+                            <div class="sno">
+                                <p>2</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/jashnebahara.jpg"
+                                    height="40px">
+                                <h3>Jashan - E - Bahara</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>97,311,112</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>3:53</p>
+                            </div>
+                            <audio id="jashnebaharaAudio"
+                                src="./assets/songs/arrahman/Jashn E Bahaaraa.mp3"></audio>
+                        </div>
+                        <div class="row">
+                            <div class="sno">
+                                <p>3</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/kunfayakun.jpg"
+                                    height="40px">
+                                <h3>Kun Faya Kun</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>272, 511, 011</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>3:14</p>
+                            </div>
+                            <audio id="kunfayaAudio" src="./assets/songs/arrahman/Kun Faya Kun.mp3"></audio>
+                        </div>
+                        <div class="row">
+                            <div class="sno">
+                                <p>4</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/lukkachhuppi.jpg"
+                                    height="40px">
+                                <h3>Lukka Chhuppi</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>500,448,171</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>3:53</p>
+                            </div>
+                            <audio id="lukachupiAudio" src="./assets/songs/arrahman/Luka Chuppi Bohut Hui.mp3"></audio>
+                        </div>
+                        <div class="row">
+                            <div class="sno">
+                                <p>5</p>
+                            </div>
+                            <div class="songs-list"><img src="./assets/songs-img/maatujhesalam.webp"
+                                    height="40px">
+                                <h3>Maa Tujhe Salaam</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>164,474,618</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>5:46</p>
+                            </div>
+                            <audio id="maatujhesalamAudio"
+                                src="./assets/songs/arrahman/Maa Tujhhe Salaam.mp3"></audio>
+                        </div>
+                        `;
+    const popularSongsDiv = document.getElementById("song-ls");
+    popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
+
+    // Add event listener to each row
+
+    const rows = document.getElementsByClassName("row");
+    for (let i = 0; i < rows.length; i++) {
+      rows[i].addEventListener("click", function () {
+        const audioElementId = this.getElementsByTagName("audio")[0].id;
+        const audioElement = document.getElementById(audioElementId);
+        const circleDiv = document.getElementById("circle");
+        if (circleDiv) {
+          audioElement.addEventListener("timeupdate", function () {
+            const duration = audioElement.duration;
+            const currentTime = audioElement.currentTime;
+            const percentage = (currentTime / duration) * 100;
+            circleDiv.style.left = `${percentage}%`;
+
+            function formatTime(time) {
+              const minutes = Math.floor(time / 60);
+              const seconds = Math.floor(time % 60);
+              return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+            }
+            const timeInfoDiv = document.getElementById("time-info");
+            timeInfoDiv.innerText = `${formatTime(currentTime)} / ${formatTime(
+              duration
+            )}`;
+          });
+        }
+
+        if (currentAudio) {
+          currentAudio.pause();
+        }
+        currentAudio = audioElement;
+        audioElement.play();
+
+        const songName = document.getElementById("info");
+        let artist = "sonunigam";
+        songName.innerText = allSongNames[artist][i + 1];
+      });
+      controller();
+    }
   } else if (lowerCaseArtist === "vishalmishra") {
     const popularSongs = `<div class="song-list-3">           
         
@@ -982,6 +1110,23 @@ function openSideBar() {
     let bar = document.getElementById("sidebar");
     bar.classList.toggle("active");
     bar.classList.toggle("sidebar");
+}
+
+function show() {
+    const show = document.getElementById("show");
+    const artists = document.getElementsByClassName("artist");
+    if(show.innerText === "Show all") {
+        show.innerText = "Show Less";
+        for(let i = 0; i < artists.length; i++) {
+            artists[i].style.flexWrap = "wrap";
+        }
+    }
+    else {
+        show.innerText = "Show all";
+        for(let i = 0; i < artists.length; i++) {
+            artists[i].style.flexWrap = "nowrap";
+        }
+    }
 }
 
 let artistsList = [
