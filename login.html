@@ -22,12 +22,13 @@
             <input type="text" name="email" id="email" placeholder="Email or username">
             <label for="password">Password</label>
             <input type="text" name="password" id="password" placeholder="Password">
+                <p id="info-auth"></p>
             <label class="switch">
                 <input type="checkbox" checked>
                 <span class="slider round"></span>
             </label>
             <p>Remember me</p>
-            <button class="login-btn">Log In</button>
+            <button class="login-btn" onclick="login()">Log In</button>
             <p class="pass"><a href="/">Forgot your password?</a></p>
             <p class="acc">Don't have an account?</p>
             <p class="pass pass2"><a href="/signup.html">Sign up for Spotify</a></p>
@@ -37,14 +38,9 @@
     document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting
 
-    var name = document.getElementById('Name').value;
+
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-
-    if(name === '') {
-        alert('Please enter your name');
-        return;
-    }
 
     if(email === '') {
         alert('Please enter your email');
@@ -55,9 +51,19 @@
         alert('Please enter your password');
         return;
     }
-
-    this.submit();
 });
+
+function login(){
+    let status = document.getElementById('info-auth') 
+    if(email.value == "farhanisthis@gmail.com" && password.value == 1234){
+        console.log("true")
+        window.location.href = "/index.html"
+    }
+    else{
+        console.log("False")
+        status.innerText = "incorrect password"
+    }
+}
 </script>
 </body>
 
