@@ -52,7 +52,7 @@
   }
   .artist {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
@@ -76,7 +76,7 @@
     flex-wrap: wrap;
   }
   .song {
-    height: 190px;
+    height: 160px;
     width: 125px;
     margin: 7px 29px;
   }

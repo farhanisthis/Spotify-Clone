@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="login.css" />
+  <script src="script.js" defer>
+  </script>
+
+</head>
+
+<body oncontextmenu="return false">
+    <div class="logo">
+        <img src="./assets/images/logo.svg" alt="logo" />
+      </div>
+    <div class="container">
+        <h1>Log in to Spotify</h1>
+        <form action="">
+            <label for="email">Email or Username</label>
+            <input type="text" name="email" id="email" placeholder="Email or username">
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" placeholder="Password">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <p>Remember me</p>
+            <button class="login-btn">Log In</button>
+            <p class="pass"><a href="/">Forgot your password?</a></p>
+            <p class="acc">Don't have an account?</p>
+            <p class="pass pass2"><a href="/signup.html">Sign up for Spotify</a></p>
+        </form>
+    </div>
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting
+
+    var name = document.getElementById('Name').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    if(name === '') {
+        alert('Please enter your name');
+        return;
+    }
+
+    if(email === '') {
+        alert('Please enter your email');
+        return;
+    }
+
+    if(password === '') {
+        alert('Please enter your password');
+        return;
+    }
+
+    this.submit();
+});
+</script>
+</body>
+
+</html>
