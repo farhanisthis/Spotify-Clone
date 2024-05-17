@@ -83,6 +83,23 @@ function changeImg() {
                                     <div class="sno">
                                         <p>5</p>
                                     </div>
+                                    <div class="songs-list"><img src="./assets/songs-img/pal.jpg"
+                                            height="40px">
+                                        <h3>Pal</h3>
+                                    </div>
+                                    <div class="song-info">
+                                        <p>164,474,618</p>
+                                    </div>
+                                    <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                        <p>5:46</p>
+                                    </div>
+                                    <audio id="palAudio"
+                                        src="./assets/songs/arijit/Pal.mp3"></audio>
+                                </div>
+                                <div class="row">
+                                    <div class="sno">
+                                        <p>6</p>
+                                    </div>
                                     <div class="songs-list"><img src="./assets/songs-img/terehawale.jpg"
                                             height="40px">
                                         <h3>Tere Hawale</h3>
@@ -401,88 +418,88 @@ function changeImg() {
   }else if (lowerCaseArtist === "sonunigam") {
     const popularSongs = `<div class="song-list-3">           
         
-        <div class="row">
-            <div class="sno">
-                <p>1</p>
-                </div>
-                <div class="songs-list" id="row1"><img
-                    src="./assets/songs-img/papamerijaan.jpg" height="40px">
+                            <div class="row">
+                                <div class="sno">
+                                    <p>1</p>
+                                    </div>
+                                    <div class="songs-list" id="row1"><img
+                                        src="./assets/songs-img/abhimujhmekahi.webp" height="40px">
+                                <h3>Abhi Mujh Mein Kahin</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>272,727,219</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>6:04</p>
+                            </div>
+                            <audio id="abhiAudio" src="./assets/songs/sonunigam/Abhi Mujhme Kahi.mp3"></audio>
+                        </div>
+                            <div class="row">
+                                <div class="sno">
+                                    <p>2</p>
+                                    </div>
+                                    <div class="songs-list" id="row1"><img
+                                        src="./assets/songs-img/Kal_Ho_Naa_Ho.jpg" height="40px">
+                                <h3>Kal Ho Na Ho</h3>
+                            </div>
+                            <div class="song-info">
+                                <p>272,727,219</p>
+                            </div>
+                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                <p>4:47</p>
+                            </div>
+                            <audio id="kalAudio" src="./assets/songs/sonunigam/Kal Ho Naa Ho.mp3"></audio>
+                        </div>
+                        <div class="row">
+                            <div class="sno">
+                                <p>3</p>
+                                </div>
+                                <div class="songs-list" id="row1"><img
+                                    src="./assets/songs-img/maihoonna.jpg" height="40px">
+                            <h3>Main Hoon Na</h3>
+                        </div>
+                        <div class="song-info">
+                            <p>272,727,219</p>
+                        </div>
+                        <div class="duration"><img src="./assets/heart.svg" height="15px">
+                            <p>6:01</p>
+                        </div>
+                        <audio id="maihunnaAudio" src="./assets/songs/sonunigam/Main Hoon Na.mp3"></audio>
+                    </div>
+                            <div class="row">
+                                <div class="sno">
+                                    <p>4</p>
+                                    </div>
+                                    <div class="songs-list" id="row1"><img
+                                        src="./assets/songs-img/papamerijaan.jpg" height="40px">
                                 <h3>Papa Meri Jaan</h3>
                             </div>
                             <div class="song-info">
                                 <p>272,727,219</p>
                             </div>
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
-                                <p>4:21</p>
+                                <p>3:04</p>
                             </div>
-                            <audio id="jaihoAudio" src="./assets/songs/sonunigam/Papa Meri Jaan.mp3"></audio>
+                            <audio id="papaAudio" src="./assets/songs/sonunigam/Papa Meri Jaan.mp3"></audio>
                         </div>
-                        <div class="row">
-                            <div class="sno">
-                                <p>2</p>
-                            </div>
-                            <div class="songs-list"><img src="./assets/songs-img/jashnebahara.jpg"
-                                    height="40px">
-                                <h3>Jashan - E - Bahara</h3>
+                            <div class="row">
+                                <div class="sno">
+                                    <p>3</p>
+                                    </div>
+                                    <div class="songs-list" id="row1"><img
+                                        src="./assets/songs-img/bhagwan.jpg" height="40px">
+                                <h3>Bhagwan Hai Kahan Re Tu</h3>
                             </div>
                             <div class="song-info">
-                                <p>97,311,112</p>
+                                <p>272,727,219</p>
                             </div>
                             <div class="duration"><img src="./assets/heart.svg" height="15px">
-                                <p>3:53</p>
+                                <p>5:11</p>
                             </div>
-                            <audio id="jashnebaharaAudio"
-                                src="./assets/songs/arrahman/Jashn E Bahaaraa.mp3"></audio>
+                            <audio id="bhagwanAudio" src="./assets/songs/sonunigam/Bhagwan Hai Kahan Re Tu.mp3"></audio>
                         </div>
-                        <div class="row">
-                            <div class="sno">
-                                <p>3</p>
-                            </div>
-                            <div class="songs-list"><img src="./assets/songs-img/kunfayakun.jpg"
-                                    height="40px">
-                                <h3>Kun Faya Kun</h3>
-                            </div>
-                            <div class="song-info">
-                                <p>272, 511, 011</p>
-                            </div>
-                            <div class="duration"><img src="./assets/heart.svg" height="15px">
-                                <p>3:14</p>
-                            </div>
-                            <audio id="kunfayaAudio" src="./assets/songs/arrahman/Kun Faya Kun.mp3"></audio>
-                        </div>
-                        <div class="row">
-                            <div class="sno">
-                                <p>4</p>
-                            </div>
-                            <div class="songs-list"><img src="./assets/songs-img/lukkachhuppi.jpg"
-                                    height="40px">
-                                <h3>Lukka Chhuppi</h3>
-                            </div>
-                            <div class="song-info">
-                                <p>500,448,171</p>
-                            </div>
-                            <div class="duration"><img src="./assets/heart.svg" height="15px">
-                                <p>3:53</p>
-                            </div>
-                            <audio id="lukachupiAudio" src="./assets/songs/arrahman/Luka Chuppi Bohut Hui.mp3"></audio>
-                        </div>
-                        <div class="row">
-                            <div class="sno">
-                                <p>5</p>
-                            </div>
-                            <div class="songs-list"><img src="./assets/songs-img/maatujhesalam.webp"
-                                    height="40px">
-                                <h3>Maa Tujhe Salaam</h3>
-                            </div>
-                            <div class="song-info">
-                                <p>164,474,618</p>
-                            </div>
-                            <div class="duration"><img src="./assets/heart.svg" height="15px">
-                                <p>5:46</p>
-                            </div>
-                            <audio id="maatujhesalamAudio"
-                                src="./assets/songs/arrahman/Maa Tujhhe Salaam.mp3"></audio>
-                        </div>
+
+                        
                         `;
     const popularSongsDiv = document.getElementById("song-ls");
     popularSongsDiv.insertAdjacentHTML("beforeend", popularSongs);
@@ -526,7 +543,8 @@ function changeImg() {
       });
       controller();
     }
-  } else if (lowerCaseArtist === "vishalmishra") {
+  } else if (lowerCaseArtist === "vishalshekhar") {
+  } else if (lowerCaseArtist === "SonuNigam") {
     const popularSongs = `<div class="song-list-3">           
         
     <div class="row">
@@ -535,7 +553,7 @@ function changeImg() {
     </div>
     <div class="songs-list" id="row1"><img
                     src="./assets/songs-img/aajbhi.png" height="40px">
-                                <h3>Aaj Bhi</h3>
+                                <h3>Papa Meri Jaan</h3>
                             </div>
                             <div class="song-info">
                             <p>272,727,219</p>
@@ -1129,11 +1147,13 @@ function show() {
     }
 }
 
+
 let artistsList = [
   "Arijit Singh",
   "Anirudh",
   "A.R. Rahman",
   "Pritam",
+  "Sonu Nigam",
   "Vishal Shekhar",
   "Vishal Mishra",
   "Aatif Aslam",
@@ -1143,6 +1163,7 @@ let artists = [
   "aatifaslam",
   "vishalmishra",
   "vishalshekhar",
+  "sonunigam",
   "pritam",
   "arrahman",
   "anirudh",
@@ -1187,3 +1208,9 @@ document
         .src.replace("mute.svg", "volume.svg");
     }
   });
+
+  function showAll(){
+    let allSongs = document.querySelector(".artist");
+    allSongs.classList.toggle("showAll")
+    document.getElementById("show").innerText = "Show Less"
+  }

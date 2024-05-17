@@ -1,6 +1,6 @@
 * {
   -webkit-tap-highlight-color: transparent; /* For iOS Safari */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For Android */
+  -webkit-tap-highlight-color: rgba(223, 185, 185, 0); /* For Android */
 }
 @media screen and (max-width: 450px) {
   .left {
@@ -40,11 +40,11 @@
       display: none;
     }
     display: flex;
-    margin-left: -35px;
+    margin-left: -20px;
     justify-content: center;
     position: relative;
-    bottom: -25px;
-    width: 190px;
+    bottom: 0px;
+    width: 160px;
     background-color: rgba(0, 0, 0, 0.63);
     border-radius: 5px;
   }
@@ -53,10 +53,12 @@
   }
   .artist {
     width: 100%;
-    height: 100%;
+    height: 77vh;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin: 0;
+    overflow-x: scroll;
+    width: 400px;
   }
   .hover-btn {
     display: none;
@@ -65,16 +67,20 @@
     height: 120px;
     width: 120px;
     img {
-      height: 190px;
-      width: 190px;
+      height: 160px;
+      width: 160px;
       margin: 0px;
       border-radius: 5px;
     }
   }
+  .showAll{
+    height: 100;
+    flex-wrap: wrap;
+  }
   .song {
     height: 190px;
     width: 125px;
-    margin: 7px 10px;
+    margin: 7px 29px;
   }
 }
 /* Album section */
@@ -232,6 +238,7 @@
   }
   .seekbar {
     width: 125%;
+    border-radius: 10px;
   }
   .media-btn {
     top: 10;
