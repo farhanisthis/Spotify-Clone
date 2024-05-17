@@ -418,28 +418,44 @@ function changeImg() {
   } else if (lowerCaseArtist === "sonunigam") {
     const popularSongs = `<div class="song-list-3">           
         
-                            <div class="row">
+    <div class="row">
                                 <div class="sno">
-                                    <p>1</p>
-                                    </div>
-                                    <div class="songs-list" id="row1"><img
-                                        src="./assets/songs-img/abhimujhmekahi.webp" height="40px">
+                                <p>1</p>
+                                </div>
+                                <div class="songs-list" id="row1"><img
+                                src="./assets/songs-img/abhimujhmekahi.webp" height="40px">
                                 <h3>Abhi Mujh Mein Kahin</h3>
-                            </div>
-                            <div class="song-info">
+                                </div>
+                                <div class="song-info">
                                 <p>272,727,219</p>
-                            </div>
-                            <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                </div>
+                                <div class="duration"><img src="./assets/heart.svg" height="15px">
                                 <p>6:04</p>
+                                </div>
+                                <audio id="abhiAudio" src="./assets/songs/sonunigam/Abhi Mujhme Kahi.mp3"></audio>
+                                </div>
+                                <div class="row">
+                                    <div class="sno">
+                                        <p>2</p>
+                                        </div>
+                                        <div class="songs-list" id="row1"><img
+                                            src="./assets/songs-img/bhagwan.jpg" height="40px">
+                                    <h3>Bhagwan Hai Kahan Re Tu</h3>
+                                </div>
+                                <div class="song-info">
+                                    <p>272,727,219</p>
+                                </div>
+                                <div class="duration"><img src="./assets/heart.svg" height="15px">
+                                    <p>5:11</p>
+                                </div>
+                                <audio id="bhagwanAudio" src="./assets/songs/sonunigam/Bhagwan Hai Kahan Re Tu.mp3"></audio>
                             </div>
-                            <audio id="abhiAudio" src="./assets/songs/sonunigam/Abhi Mujhme Kahi.mp3"></audio>
-                        </div>
-                            <div class="row">
+                                <div class="row">
                                 <div class="sno">
-                                    <p>2</p>
-                                    </div>
-                                    <div class="songs-list" id="row1"><img
-                                        src="./assets/songs-img/Kal_Ho_Naa_Ho.jpg" height="40px">
+                                <p>3</p>
+                                </div>
+                                <div class="songs-list" id="row1"><img
+                                src="./assets/songs-img/Kal_Ho_Naa_Ho.jpg" height="40px">
                                 <h3>Kal Ho Na Ho</h3>
                             </div>
                             <div class="song-info">
@@ -452,7 +468,7 @@ function changeImg() {
                         </div>
                         <div class="row">
                             <div class="sno">
-                                <p>3</p>
+                                <p>4</p>
                                 </div>
                                 <div class="songs-list" id="row1"><img
                                     src="./assets/songs-img/maihoonna.jpg" height="40px">
@@ -468,7 +484,7 @@ function changeImg() {
                     </div>
                             <div class="row">
                                 <div class="sno">
-                                    <p>4</p>
+                                    <p>5</p>
                                     </div>
                                     <div class="songs-list" id="row1"><img
                                         src="./assets/songs-img/papamerijaan.jpg" height="40px">
@@ -481,22 +497,6 @@ function changeImg() {
                                 <p>3:04</p>
                             </div>
                             <audio id="papaAudio" src="./assets/songs/sonunigam/Papa Meri Jaan.mp3"></audio>
-                        </div>
-                            <div class="row">
-                                <div class="sno">
-                                    <p>3</p>
-                                    </div>
-                                    <div class="songs-list" id="row1"><img
-                                        src="./assets/songs-img/bhagwan.jpg" height="40px">
-                                <h3>Bhagwan Hai Kahan Re Tu</h3>
-                            </div>
-                            <div class="song-info">
-                                <p>272,727,219</p>
-                            </div>
-                            <div class="duration"><img src="./assets/heart.svg" height="15px">
-                                <p>5:11</p>
-                            </div>
-                            <audio id="bhagwanAudio" src="./assets/songs/sonunigam/Bhagwan Hai Kahan Re Tu.mp3"></audio>
                         </div>
 
                         
