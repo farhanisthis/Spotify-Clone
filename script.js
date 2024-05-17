@@ -153,8 +153,8 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "arijit";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Arijit Singh";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
@@ -282,8 +282,8 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "aatifaslam";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Aatif Aslam";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
@@ -410,12 +410,12 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "arrahman";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "ARRahman";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
-  }else if (lowerCaseArtist === "sonunigam") {
+  } else if (lowerCaseArtist === "sonunigam") {
     const popularSongs = `<div class="song-list-3">           
         
                             <div class="row">
@@ -538,13 +538,12 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "sonunigam";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Sonu Nigam";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
-  } else if (lowerCaseArtist === "vishalshekhar") {
-  } else if (lowerCaseArtist === "SonuNigam") {
+  } else if (lowerCaseArtist === "vishalmishra") {
     const popularSongs = `<div class="song-list-3">           
         
     <div class="row">
@@ -553,7 +552,7 @@ function changeImg() {
     </div>
     <div class="songs-list" id="row1"><img
                     src="./assets/songs-img/aajbhi.png" height="40px">
-                                <h3>Papa Meri Jaan</h3>
+                                <h3>Aaj Bhi</h3>
                             </div>
                             <div class="song-info">
                             <p>272,727,219</p>
@@ -667,8 +666,8 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "vishalmishra";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Vishal Mishra";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
@@ -795,8 +794,8 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "vishalshekhar";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Vishal Shekhar";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
@@ -925,8 +924,8 @@ function changeImg() {
         audioElement.play();
 
         const songName = document.getElementById("info");
-        let artist = "pritam";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Pritam";
+        songName.innerText = musicLibrary[artist][i];
       });
       controller();
     }
@@ -1044,8 +1043,8 @@ function changeImg() {
         }
 
         const songName = document.getElementById("info");
-        let artist = "anirudh";
-        songName.innerText = allSongNames[artist][i + 1];
+        let artist = "Anirudh";
+        songName.innerText = musicLibrary[artist][i];
 
         if (currentAudio) {
           currentAudio.pause();
@@ -1125,28 +1124,36 @@ function controller() {
 }
 
 function openSideBar() {
-    let bar = document.getElementById("sidebar");
-    bar.classList.toggle("active");
-    bar.classList.toggle("sidebar");
+  let bar = document.getElementById("sidebar");
+  bar.classList.toggle("active");
+  bar.classList.toggle("sidebar");
 }
 
 function show() {
-    const show = document.getElementById("show");
-    const artists = document.getElementsByClassName("artist");
-    if(show.innerText === "Show all") {
-        show.innerText = "Show Less";
-        for(let i = 0; i < artists.length; i++) {
-            artists[i].style.flexWrap = "wrap";
-        }
+  const show = document.getElementById("show");
+  const artists = document.getElementsByClassName("artist");
+  if (show.innerText === "Show all") {
+    show.innerText = "Show Less";
+    for (let i = 0; i < artists.length; i++) {
+      artists[i].style.flexWrap = "wrap";
     }
-    else {
-        show.innerText = "Show all";
-        for(let i = 0; i < artists.length; i++) {
-            artists[i].style.flexWrap = "nowrap";
-        }
+  } else {
+    show.innerText = "Show all";
+    for (let i = 0; i < artists.length; i++) {
+      artists[i].style.flexWrap = "nowrap";
     }
+  }
 }
-
+let musicLibrary = {
+    "Arijit Singh": ["Apna Bana Le", "O Mahi O Mahi", "Heeriye - Arijit Singh", "Kesariya Tera Ishq Hai Piya", "Pal", "Tere Hawale"],
+    "Aatif Aslam": ["Dekhte Dekhte", "Dil Diyan Gallan", "Tajdar E Haram", "Tera Hone Laga hu", "Tere Sang Yaara"],
+    "Pritam": ["Kesariya Tera Ishq Hai Piya", "O Mahi O Mahi", "Phir Aur Kya Chahiye", "Shayad", "Ve Kamleya"],
+    "Anirudh": ["ANBENUM", "Badass", "Bloody Sweet", "Lokiverse 2.0", "Zinda Banda Remix"],
+    "ARRahman": ["Jai Ho", "Jashn E Bahaaraa", "Kun Faya Kun", "Luka Chuppi Bohut Hui", "Maa Tujhhe Salaam"],
+    "Vishal Mishra": ["Aaj Bhi", "Ek Mulaqaat", "Jaan Ban Gaye", "Pehle Bhi Main", "Zihaal e Miskin"],
+    "Vishal Shekhar": ["Besharam Rang", "Ghungroo", "Jag Ghoomeya", "Jhoome Jo Pathaan", "Nashe Si Chadh Gayi"],
+    "Sonu Nigam": ["Abhi Mujhme Kahi", "Bhagwan Hai Kahan Re Tu", "Kal Ho Naa Ho", "Main Hoon Na", "Papa Meri Jaan"]
+};
 
 let artistsList = [
   "Arijit Singh",
@@ -1171,25 +1178,6 @@ let artists = [
 let allSongNames = {};
 let SongNames = [];
 
-artists.forEach((artist) => {
-  fetch(`/assets/songs/${artist}/`)
-    .then((response) => response.text())
-    .then((htmlContent) => {
-      let parser = new DOMParser();
-      let htmlDoc = parser.parseFromString(htmlContent, "text/html");
-      let songLinks = htmlDoc.querySelectorAll("#files .name");
-      let songNames = [];
-      songLinks.forEach((link) => {
-        let songName = link.textContent;
-        songName = songName.replace(".mp3", "");
-        songName = songName.replace(/b/g, "");
-        songNames.push(songName.trim());
-      });
-      allSongNames[artist] = songNames;
-      //   console.log(allSongNames);
-    })
-    .catch((error) => console.error("Error fetching songs:", error));
-});
 document.querySelector(".seekbar").addEventListener("click", (e) => {
   let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
   document.querySelector(".circle").style.left = percent + "%";
@@ -1209,8 +1197,8 @@ document
     }
   });
 
-  function showAll(){
-    let allSongs = document.querySelector(".artist");
-    allSongs.classList.toggle("showAll")
-    document.getElementById("show").innerText = "Show Less"
-  }
+function showAll() {
+  let allSongs = document.querySelector(".artist");
+  allSongs.classList.toggle("showAll");
+  document.getElementById("show").innerText = "Show Less";
+}
